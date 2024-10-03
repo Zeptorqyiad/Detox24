@@ -1,0 +1,81 @@
+@import "../components/ui";
+
+//=======================================================================
+//=======================================================================
+
+//================================Burger List============================
+@media (max-width: $md2) {
+	.burger__list {
+		position: relative;
+		width: 23px;
+		height: 14px;
+		cursor: pointer;
+		& span:nth-child(1) {
+			display: inline-block;
+			height: 2px;
+			background: black;
+			transition: transform 0.4s;
+			will-change: transform;
+			position: absolute;
+			width: 100%;
+			top: 0;
+		}
+		& span:nth-child(2) {
+			display: inline-block;
+			transition: scale 0.4s;
+			will-change: scale;
+			height: 2px;
+			background: black;
+			transform: translate(0, -50%);
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			left: 0;
+		}
+		& span:nth-child(3) {
+			display: inline-block;
+			height: 2px;
+			background: black;
+			transform: translate(0);
+			transition: all 0.4s;
+			will-change: transform;
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	.burger__list.active {
+		transition: transform 0.3s;
+		& span:nth-child(1) {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+		& span:nth-child(2) {
+			transform: scale(0);
+		}
+		& span:nth-child(3) {
+			transform: rotate(-45deg) translate(3px, -3px);
+		}
+	}
+	.menu__icon.active {
+		transform: translate(0, 0);
+	}
+	.menu__icon {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		position: absolute;
+		width: 350px;
+		height: 370px;
+		border-radius: 10px;
+		border: 2px solid black;
+		top: 120px;
+		right: 0px;
+		padding: 25px;
+		transform: translate(0px, 0px);
+		background-color: var(--white-color);
+		margin-right: 10px;
+		transition: transform 0.3s ease 0s;
+		transform: translate(120%, 0);
+	}
+}
