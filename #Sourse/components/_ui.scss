@@ -1,10 +1,17 @@
 // ПЕРЕМЕННЫЕ>
 
-$md1: 992.98px;
-$md2: 767.98px;
-$md3: 479.98px;
-$minwidth: 320px;
-$ff1: Arial;
+$md1: 1600.98px;
+$md2: 1440.98px;
+$md3: 1200.98px;
+$md4: 1024.98px;
+$minwidth: 375px;
+$ff1: Inter;
+$ff2: Raleway;
 
 :root {
+	--bg-white-color: #ffffff;
+	--dark-white-color: #f3f3f3;
+	--dark-color: #2f2f2f;
+	--blue-color: #1d69d8;
+	--light-blue-color: #4f7ab8;
 }

@@ -1,5 +1,8 @@
 //ШРИФТ ПО УМОЛЧАНИЮ>
 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
 // ФАЙЛ ОБНУЛЯЮЩИХ СТИЛЕЙ>
 @import "./components/nullstyle";
 
@@ -7,6 +10,7 @@
 @import "./Layouts/header";
 @import "./Layouts/footer";
 @import "./Layouts/wrapper";
+@import "./Layouts/main";
 @import "./Layouts/popup";
 
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>

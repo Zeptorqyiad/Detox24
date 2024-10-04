@@ -12,7 +12,7 @@ burgerLine.addEventListener('click', () => {
 })
 
 window.addEventListener('resize', function () {
-   if (window.matchMedia('(min-width: px)').matches) {
+   if (window.matchMedia('(max-width: px)').matches) {
       burgerLine.classList.remove('active')
       burgerMenu.classList.remove('active')
       document.body.classList.remove('_lock')
