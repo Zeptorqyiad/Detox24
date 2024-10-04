@@ -99,3 +99,43 @@ document.addEventListener('keydown', function (e) {
          Element.prototype.msMatchesSelector
    }
 })()
+
+// Custom Slider
+
+const windowWidth = window.innerWidth
+offset = 0
+
+const sliderBlock = document.querySelector('.')
+
+document.querySelector('.arrow-left').addEventListener('click', function () {
+   if (windowWidth >= 425) {
+      // offset -= width
+      if (offset < 0) {
+         // offset = width
+      }
+      sliderLine.style.left = -offset + 'px'
+   }
+   if (windowWidth < 424) {
+      // offset -= width
+      if (offset <= 0) {
+         // offset = width
+      }
+      sliderLine.style.left = -offset + 'px'
+   }
+})
+document.querySelector('.arrow-right').addEventListener('click', function () {
+   if (windowWidth >= 425) {
+      // offset += width
+      if (offset > 860) {
+         offset = 0
+      }
+      sliderLine.style.left = -offset + 'px'
+   }
+   if (windowWidth < 424) {
+      // offset += width
+      if (offset > 860) {
+         offset = 0
+      }
+      sliderLine.style.left = -offset + 'px'
+   }
+})
