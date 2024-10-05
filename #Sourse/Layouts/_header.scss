@@ -47,6 +47,10 @@
 .menu__link {
 	@include textDefault($ff1, var(--dark-color), 15px, 400, 17px);
 	line-height: 143%;
+	transition: font-weight 0.2s;
+	&:hover {
+		font-weight: 600;
+	}
 }
 .header__btn {
 	@include textDefault($ff1, var(--bg-white-color), 16px, 500, 18px);
@@ -57,7 +61,7 @@
 	transition: background-color 0.3s;
 	will-change: background-color;
 	&:hover {
-		background-color: #347fef;
+		background-color: #104ea8;
 	}
 }
 //================================Header Media===========================

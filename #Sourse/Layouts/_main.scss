@@ -6,7 +6,7 @@
 	background-color: var(--dark-white-color);
 	border-radius: 0px 0px 40px 40px;
 	padding: 60px 0 30px 0;
-	height: 800px;
+	height: auto;
 }
 .banner__content {
 	@include flexbox;
@@ -23,16 +23,19 @@
 	@include textDefault($ff2, var(--dark-color), 90px, 500, 90px);
 	line-height: 110%;
 	text-align: left;
-	> span:nth-child(1) {
+	p {
+		display: none;
+	}
+	> span:nth-child(2) {
 		width: 600px;
 		border-radius: 200px;
 		background: var(--bg-white-color);
 		padding: 0 20px;
 	}
-	> span:nth-child(2) {
+	> span:nth-child(3) {
 		opacity: 0.3;
 	}
-	> span:nth-child(3) {
+	> span:nth-child(4) {
 		padding-left: 20px;
 	}
 	> span:last-child {
@@ -53,6 +56,9 @@
 }
 .banner__content-top-rs {
 	flex: 1 0 auto;
+}
+.banner__content-top-min {
+	display: none;
 }
 .circle_1 {
 	display: flex;
@@ -100,4 +106,307 @@
 	}
 }
 .banner__content-bottom {
+	@include flexbox;
+	flex-wrap: nowrap;
+	height: 311px;
+	gap: 30px;
 }
+.banner__content-min {
+	width: 755px;
+	@include flexbox;
+	gap: 29px;
+}
+.banner__bottom-item {
+	@include flexbox;
+	flex-direction: column;
+	gap: 30px;
+	flex: 0 1 363px;
+	background-color: var(--bg-white-color);
+	border-radius: 20px;
+	padding-top: 20px;
+	padding-left: 21px;
+}
+.banner__bottom-item-title {
+	@include textDefault($ff2, var(--dark-color), 30px, 600, 30px);
+	line-height: 120%;
+	text-align: left;
+	max-width: 269px;
+}
+.banner__bottom-item-text {
+	@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
+	line-height: 143%;
+	text-align: left;
+}
+.banner__arrow-btn {
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	background: var(--blue-color);
+	@include bgImage("../../assets/icon/arrow-right.svg", center, no-repeat, auto);
+}
+.banner__content-max {
+	position: relative;
+	@include flexbox;
+	flex-direction: column;
+	gap: 30px;
+	width: 755px;
+	background-color: var(--bg-white-color);
+	border-radius: 20px;
+	padding-top: 20px;
+	padding-left: 21px;
+	overflow: hidden;
+	img {
+		position: absolute;
+		width: auto;
+		height: auto;
+		top: -11%;
+		right: -7%;
+	}
+}
+
+//==================================Banner Media=====================================
+@media (max-width: 1556.98px) {
+	.banner {
+		padding: 54px 0 30px 0;
+	}
+	.banner__content {
+		gap: 86px;
+	}
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 81px, 500, 81px);
+		line-height: 110%;
+		margin-bottom: 27px;
+	}
+	.circle_1 {
+		width: 337px;
+		height: 337px;
+		border-radius: 50%;
+	}
+	.circle_2 {
+		width: 295px;
+		height: 295px;
+		border-radius: 50%;
+		img {
+			width: 259px;
+			height: 259px;
+		}
+	}
+	.banner__subtitle {
+		display: flex;
+		justify-content: center;
+		max-width: 330px;
+		gap: 25px;
+		@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
+		line-height: 143%;
+	}
+	.banner__btn {
+		font-size: 15px;
+	}
+	.banner__block-btn {
+		position: relative;
+		max-width: 293px;
+		gap: 13px;
+		border-radius: 180px;
+		p {
+			@include textDefault($ff1, var(--dark-color), 14px, 400, 14px);
+			line-height: 110%;
+		}
+		&::after {
+			content: "От 2500₽";
+			position: absolute;
+			right: -75px;
+			top: 50%;
+			transform: translate(0, -50%);
+			@include textDefault($ff1, var(--blue-color), 14px, 500, 14px);
+			line-height: 110%;
+		}
+	}
+}
+@media (max-width: 1408px) {
+	.banner__content {
+		gap: 71px;
+	}
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 69px, 500, 69px);
+		line-height: 110%;
+		margin-bottom: 27px;
+	}
+	.circle_1 {
+		width: 272px;
+		height: 272px;
+	}
+	.circle_2 {
+		width: 238px;
+		height: 238px;
+		img {
+			width: 209px;
+			height: 209px;
+		}
+	}
+}
+@media (max-width: 1194.98px) {
+	.banner__content {
+		gap: 61px;
+	}
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 59px, 500, 59px);
+		line-height: 110%;
+		margin-bottom: 27px;
+	}
+	.circle_1 {
+		width: 229px;
+		height: 229px;
+	}
+	.circle_2 {
+		width: 201px;
+		height: 201px;
+		img {
+			width: 176px;
+			height: 176px;
+		}
+	}
+	.banner__title {
+		> span:nth-child(2) {
+			padding: 0 10px;
+		}
+		> span:nth-child(4) {
+			padding-left: 10px;
+		}
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 1007.98px) {
+	.banner {
+		padding: 30px 0 25px 0;
+	}
+	.banner__title {
+		p {
+			display: block;
+			padding-left: 10px;
+			opacity: 0.3;
+		}
+		> span:nth-child(3) {
+			display: none;
+		}
+	}
+}
+@media (max-width: 694.98px) {
+	.banner__block-btn {
+		position: relative;
+		max-width: 238px;
+	}
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 42px, 500, 42px);
+		line-height: 110%;
+		> span:nth-child(2) {
+			display: block;
+			box-sizing: content-box;
+			max-width: 270px;
+		}
+	}
+	.banner__content-top-rs {
+		display: none;
+	}
+	.banner__subtitle {
+		margin: 0;
+	}
+	.banner__content-top-min {
+		display: block;
+		width: 282px;
+		height: 282px;
+		box-sizing: border-box;
+		border: 0.81px solid rgb(255, 255, 255);
+		background: rgba(255, 255, 255, 0.25);
+		border-radius: 50%;
+		margin-bottom: 20px;
+		margin: 15px auto 20px auto;
+	}
+	.circle_min-1 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.circle-min-2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 246px;
+		height: 246px;
+		box-sizing: border-box;
+		border: 0.81px solid rgb(255, 255, 255);
+		background: rgba(255, 255, 255, 0.3);
+		border-radius: 50%;
+		img {
+			width: 217px;
+			height: 214px;
+			border-radius: 50%;
+		}
+	}
+}
+@media (max-width: 512.98px) {
+	.banner {
+		padding: 10px 0 10px 0;
+	}
+	.banner__content {
+		gap: 61px;
+	}
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 32px, 500, 32px);
+		letter-spacing: -2px;
+		line-height: 110%;
+		margin-bottom: 15px;
+		> span:nth-child(2) {
+			display: block;
+			box-sizing: content-box;
+			max-width: 186px;
+		}
+	}
+	.banner__block-btn {
+		min-width: 100%;
+		background-color: inherit;
+		gap: 0;
+		p {
+			display: none;
+		}
+		&::before {
+			content: "От 5000₽";
+			position: absolute;
+			right: -20px;
+			top: 80%;
+			transform: translate(0, -80%);
+			@include textDefault($ff1, var(--dark-color), 12px, 500, 12px);
+			text-decoration: line-through;
+			opacity: 0.3;
+			line-height: 110%;
+		}
+		&::after {
+			content: "От 2500₽";
+			position: absolute;
+			right: -20px;
+			top: 20%;
+			transform: translate(0, -20%);
+			@include textDefault($ff1, var(--blue-color), 12px, 500, 12px);
+			line-height: 110%;
+		}
+	}
+	.banner__btn {
+		width: 287px;
+		text-align: center;
+		padding: 14px 45px;
+	}
+}
+@media (max-width: $minwidth) {
+	.banner__btn {
+		display: block;
+	}
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 32px, 500, 32px);
+		line-height: 110%;
+		margin-bottom: 15px;
+		> span:nth-child(2) {
+			display: block;
+			box-sizing: content-box;
+		}
+	}
+}
+//=======================================================================
