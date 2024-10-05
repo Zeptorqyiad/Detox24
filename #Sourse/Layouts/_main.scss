@@ -60,6 +60,9 @@
 .banner__content-top-min {
 	display: none;
 }
+.text-min-banner-3 {
+	max-width: 453px;
+}
 .circle_1 {
 	display: flex;
 	justify-content: center;
@@ -116,6 +119,12 @@
 	@include flexbox;
 	gap: 29px;
 }
+.text-min-banner-1 {
+	max-width: 301px;
+}
+.text-min-banner-2 {
+	max-width: 311px;
+}
 .banner__bottom-item {
 	@include flexbox;
 	flex-direction: column;
@@ -125,6 +134,7 @@
 	border-radius: 20px;
 	padding-top: 20px;
 	padding-left: 21px;
+	padding-bottom: 20px;
 }
 .banner__bottom-item-title {
 	@include textDefault($ff2, var(--dark-color), 30px, 600, 30px);
@@ -222,6 +232,59 @@
 		}
 	}
 }
+@media (max-width: $md2) {
+	.banner__content-bottom {
+		gap: 25px;
+		height: 282px;
+	}
+	.banner__content-min {
+		width: 688px;
+		gap: 25px;
+	}
+	.banner__bottom-item {
+		@include flexbox;
+		gap: 0;
+		flex: 0 1 331px;
+	}
+	.banner__bottom-item-title {
+		@include textDefault($ff2, var(--dark-color), 27px, 600, 27px);
+		line-height: 120%;
+		max-width: 269px;
+		margin-bottom: 30px;
+	}
+	.banner__bottom-item-text {
+		@include textDefault($ff1, var(--dark-color), 15px, 400, 15px);
+		line-height: 143%;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.text-min-banner-1 {
+		max-width: 278px;
+	}
+	.text-min-banner-2 {
+		max-width: 286px;
+	}
+	.text-min-banner {
+		max-width: 419px;
+	}
+	.banner__arrow-btn {
+		width: 44px;
+		height: 44px;
+		border-radius: 22px;
+		@include bgImage("../../assets/icon/arrow-right.svg", center, no-repeat, auto);
+	}
+	.banner__content-max {
+		gap: 0;
+		flex: 0 1 687px;
+		img {
+			position: absolute;
+			width: 268px;
+			height: auto;
+			top: -9%;
+			right: -8%;
+		}
+	}
+}
 @media (max-width: 1408px) {
 	.banner__content {
 		gap: 71px;
@@ -242,6 +305,23 @@
 			width: 209px;
 			height: 209px;
 		}
+	}
+}
+@media (max-width: 1342.98px) {
+	.banner__bottom-item-title {
+		font-size: 22px;
+		max-width: 230px;
+	}
+	.banner__bottom-item-text {
+		max-width: 369px;
+	}
+	.banner__content-bottom {
+		height: 291px;
+	}
+}
+@media (max-width: $md3) {
+	.text-min-banner-1 {
+		max-width: 200px;
 	}
 }
 @media (max-width: 1194.98px) {
@@ -273,6 +353,28 @@
 			padding-left: 10px;
 		}
 		margin-bottom: 30px;
+	}
+}
+@media (max-width: 1188.98px) {
+	.banner__content-min {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.banner__bottom-item {
+		height: 146px;
+	}
+	.banner__bottom-item-title {
+		min-width: 100%;
+		margin-bottom: 20px;
+	}
+	.text-min-banner-1 {
+		min-width: 336px;
+	}
+	.banner__arrow-btn {
+		display: none;
+	}
+	.banner__content-max {
+		height: 312px;
 	}
 }
 @media (max-width: 1007.98px) {
