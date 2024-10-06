@@ -135,8 +135,35 @@
 		<div id="popup" class="popup">
 			<div class="popup__body">
 				<div class="popup__content">
-					<a href="#" class="popup__close close-popup">X</a>
-					<p>Привет</p>
+					<a href="#" class="popup__close close-popup"></a>
+					<h3>Вызвать врача</h3>
+					<div class="popup__form-block">
+						<p>
+							Укажите свои контакты и мы сразу свяжемся с Вами.
+						</p>
+						<form method="post" class="popup-form">
+							<div class="popup-form_item">
+								<label for="nameInp"></label>
+								<input id="nameInp" type="text" name="name" placeholder="Ваше имя*" required>
+							</div>
+							<div class="popup-form_item">
+								<label for="telInp"></label>
+								<input id="telInp" type="number" name="telephone" placeholder="+7 (999) 999-99-99*" required>
+							</div>
+							<style>
+								input::-webkit-outer-spin-button,
+								input::-webkit-inner-spin-button {
+									-webkit-appearance: none;
+									margin: 0;
+								}
+							</style>
+							<textarea placeholder="Комментарий" style="resize: none;" required></textarea>
+							<button type="submit" class="header__btn popup__btn">Вызвать врача</button>
+						</form>
+					</div>
+					<span class="popup-politic">
+						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="##">политикой конфиденциальности</a>
+					</span>
 				</div>
 			</div>
 		</div>

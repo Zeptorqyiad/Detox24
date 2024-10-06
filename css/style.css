@@ -1087,13 +1087,16 @@ body._lock {
 }
 
 .popup__content {
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 9999;
-  padding: 62px 50px 55px 50px;
-  background-color: white;
+  padding: 30px;
+  background-color: var(--dark-white-color);
   color: #000;
-  max-width: 569px;
-  border-radius: 4px;
+  width: 630px;
+  height: 676px;
+  border-radius: 30px;
   transition: all 0.8s ease 0s;
   opacity: 0;
   transform: translate(0px, -100%);
@@ -1101,8 +1104,126 @@ body._lock {
 
 .popup__close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 47px;
+  right: 30px;
+  background-image: url("../../assets/icon/ClosePop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 26px;
+  height: 26px;
+}
+
+.popup__content h3 {
+  font-family: Inter;
+  color: var(--blue-color);
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 100%;
+  line-height: 120%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.popup__form-block {
+  border-radius: 20px;
+  background: var(--bg-white-color);
+  padding: 20px;
+  max-height: 405px;
+  margin-bottom: 20px;
+}
+.popup__form-block p {
+  font-family: Raleway;
+  color: var(--dark-color);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 100%;
+  line-height: 120%;
+  text-align: left;
+  max-width: 346px;
+  margin-bottom: 40px;
+}
+
+.popup-form textarea {
+  width: 100%;
+  border-radius: 15px;
+  background: var(--dark-white-color);
+  height: 93px;
+  opacity: 0.5;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.popup-form textarea ::-moz-placeholder {
+  color: rgba(47, 47, 47, 0.2);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 143%;
+  text-align: left;
+}
+.popup-form textarea ::placeholder {
+  color: rgba(47, 47, 47, 0.2);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 143%;
+  text-align: left;
+}
+
+.popup-form_item input {
+  width: 100%;
+  background-color: inherit;
+  padding: 10px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(47, 47, 47, 0.5);
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.popup-form_item input ::-moz-placeholder {
+  color: rgba(47, 47, 47, 0.5);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 143%;
+  text-align: left;
+}
+.popup-form_item input ::placeholder {
+  color: rgba(47, 47, 47, 0.5);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 143%;
+  text-align: left;
+}
+
+.popup__btn {
+  display: block;
+  min-width: 570px;
+  width: 100%;
+  margin-left: -20px;
+}
+
+.popup-politic {
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 116.6666666667%;
+  line-height: 143%;
+  text-align: left;
+  max-width: 325px;
+  opacity: 0.5;
+  margin-top: 73px;
+}
+.popup-politic a {
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 116.6666666667%;
+  text-decoration: underline;
+  opacity: 0.5;
 }
 
 :root {

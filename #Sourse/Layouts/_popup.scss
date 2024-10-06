@@ -34,19 +34,105 @@
 	opacity: 1;
 }
 .popup__content {
+	@include flexbox;
+	flex-direction: column;
 	position: relative;
 	z-index: 9999;
-	padding: 62px 50px 55px 50px;
-	background-color: white; // var()
+	padding: 30px;
+	background-color: var(--dark-white-color);
 	color: #000;
-	max-width: 569px;
-	border-radius: 4px;
+	width: 630px;
+	height: 676px;
+	border-radius: 30px;
 	transition: all 0.8s ease 0s;
 	opacity: 0;
 	transform: translate(0px, -100%);
 }
 .popup__close {
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 47px;
+	right: 30px;
+	@include bgImage("../../assets/icon/ClosePop.svg", center, no-repeat, auto);
+	width: 26px;
+	height: 26px;
+}
+.popup__content {
+	h3 {
+		@include textDefault($ff1, var(--blue-color), 45px, 600, 45px);
+		line-height: 120%;
+		text-align: left;
+		margin-bottom: 40px;
+	}
+}
+.popup__form-block {
+	border-radius: 20px;
+	background: var(--bg-white-color);
+	padding: 20px;
+	max-height: 405px;
+	p {
+		@include textDefault($ff2, var(--dark-color), 25px, 600, 25px);
+		line-height: 120%;
+		text-align: left;
+		max-width: 346px;
+		margin-bottom: 40px;
+	}
+	margin-bottom: 20px;
+}
+.popup-form {
+	textarea {
+		width: 100%;
+		border-radius: 15px;
+		background: var(--dark-white-color);
+		height: 93px;
+		opacity: 0.5;
+		padding: 10px;
+		font-size: 16px;
+		margin-bottom: 40px;
+		::placeholder {
+			color: rgba(47, 47, 47, 0.2);
+			font-family: Inter;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 143%;
+			text-align: left;
+		}
+	}
+}
+.popup-form_item {
+	input {
+		width: 100%;
+		background-color: inherit;
+		padding: 10px 0;
+		box-sizing: border-box;
+		border-bottom: 1px solid rgba(47, 47, 47, 0.5);
+		font-size: 16px;
+		margin-bottom: 50px;
+		::placeholder {
+			color: rgba(47, 47, 47, 0.5);
+			font-family: Inter;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 143%;
+			text-align: left;
+		}
+	}
+}
+.popup__btn {
+	display: block;
+	min-width: 570px;
+	width: 100%;
+	margin-left: -20px;
+}
+.popup-politic {
+	@include textDefault($ff1, var(--dark-color), 12px, 400, 14px);
+	line-height: 143%;
+	text-align: left;
+	max-width: 325px;
+	opacity: 0.5;
+	margin-top: 73px;
+	a {
+		@include textDefault($ff1, var(--dark-color), 12px, 400, 14px);
+		text-decoration: underline;
+		opacity: 0.5;
+	}
 }
