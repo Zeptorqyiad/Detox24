@@ -1,11 +1,13 @@
 // Burger
 const burgerLine = document.querySelector('.burger__list')
-const burgerMenu = document.querySelector('.icon-menu')
+const burgerMenu = document.querySelector('.menu__icon')
+const burgerBlock = document.querySelector('.icon-menu')
 
 burgerLine.addEventListener('click', () => {
    if (burgerLine) {
       burgerLine.classList.toggle('active')
       burgerMenu.classList.toggle('active')
+      burgerBlock.classList.toggle('active')
       document.body.classList.toggle('_lock')
    }
 })
