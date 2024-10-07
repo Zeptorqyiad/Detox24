@@ -588,19 +588,17 @@
 	position: relative;
 	background-color: var(--bg-white-color);
 }
-.about__container {
-	h6 {
-		margin-top: 140px;
-		display: block;
-		@include textDefault($ff1, var(--light-blue-color), 14px, 600, 14px);
-		line-height: 120%;
-		text-align: left;
-		text-transform: uppercase;
-		opacity: 0.6;
-	}
+.section-title {
+	margin-top: 140px;
+	@include textDefault($ff1, var(--light-blue-color), 14px, 600, 14px);
+	line-height: 120%;
+	opacity: 0.6;
+	display: block;
+	text-align: left;
+	text-transform: uppercase;
 }
 .about__content {
-	padding: 20px 0 153px 0;
+	padding: 20px 0 0px 0;
 	gap: 29px;
 	@include flexbox;
 }
@@ -749,7 +747,7 @@
 //=================================About Media======================================
 @media (max-width: $md2) {
 	.about__content {
-		padding: 20px 0 150px 0;
+		padding: 20px 0 0px 0;
 		gap: 32px;
 	}
 	.about__content-ls {
@@ -846,7 +844,7 @@
 }
 @media (max-width: $md3) {
 	.about__content {
-		padding: 20px 0 129px 0;
+		padding: 20px 0 0px 0;
 		gap: 64px;
 	}
 	.about__content-ls {
@@ -1001,6 +999,138 @@
 		height: 408px;
 	}
 }
+//=======================================================================
+//=======================================================================
+
+.stage {
+	position: relative;
+}
+.stage__content {
+	margin-top: 20px;
+	background-color: var(--dark-white-color);
+	border-radius: 30px;
+	width: 100%;
+	padding: 30px;
+	@include flexbox;
+	flex-direction: column;
+}
+.stage__content-top {
+	margin-bottom: 80px;
+	@include flexbox;
+	justify-content: space-between;
+	align-items: start;
+}
+.stage__title {
+	max-width: 786px;
+	@include textDefault($ff2, var(--dark-color), 35px, 600, 35px);
+	line-height: 120%;
+	text-align: left;
+	span {
+		color: var(--blue-color);
+	}
+}
+.stage__content-center {
+	margin-bottom: 50px;
+	width: 100%;
+	@include flexbox;
+	flex-wrap: nowrap;
+	background-color: var(--bg-white-color);
+	border-radius: 20px;
+}
+.stage__content-side {
+	flex: 0 1 33.333%;
+	padding: 30px 30px 30px 90px;
+}
+.stage__side-content {
+	@include flexbox;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 419px;
+	height: 250px;
+	h3 {
+		position: relative;
+		@include textDefault($ff2, var(--dark-color), 30px, 600, 30px);
+		line-height: 120%;
+		text-align: left;
+	}
+}
+.stage__side-title-1::before {
+	content: "1";
+}
+.stage__side-title-2::before {
+	content: "2";
+}
+.stage__side-title-3::before {
+	content: "3";
+}
+.stage__side-title-1::before,
+.stage__side-title-2::before,
+.stage__side-title-3::before {
+	@include textDefault($ff1, var(--blue-color), 20px, 500, 20px);
+	@include flexbox;
+	align-items: center;
+	justify-content: center;
+	line-height: 120%;
+	text-align: center;
+	position: absolute;
+	background: var(--dark-white-color);
+	top: 0;
+	left: -60px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+.stage__subtitle-content {
+	@include flexbox;
+	flex-direction: column;
+	gap: 20px;
+}
+.stage__subtitle-text {
+	@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
+	line-height: 143%;
+	text-align: left;
+}
+.stage__time {
+	width: 266px;
+	background-color: var(--dark-white-color);
+	border-radius: 100px;
+	height: 29px;
+}
+.stage__time-min {
+	background-color: var(--blue-color);
+	@include textDefault($ff1, var(--dark-white-color), 16px, 500, 16px);
+	line-height: 143%;
+	text-align: center;
+	border-radius: 40px;
+	padding: 3px 12px;
+	max-width: 140px;
+}
+.time-max {
+	max-width: 221px;
+}
+.stage-line {
+	position: relative;
+	hr {
+		min-height: 100%;
+		border: 0.5px solid var(--dark-white-color);
+	}
+	&::before {
+		content: "";
+		background: var(--bg-white-color);
+		border: 1px solid var(--dark-white-color);
+		border-radius: 50%;
+		@include bgImage("../../assets/icon/stage-arrow.svg", center, no-repeat, auto);
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 25px;
+		height: 25px;
+		transform: translate(-50%, 0);
+	}
+}
+.stage__content-bottom {
+}
+
 //=======================================================================
 
 // TODO: Hover effect on icon VK, TG
