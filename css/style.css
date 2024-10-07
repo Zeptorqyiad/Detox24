@@ -1728,8 +1728,7 @@ body._lock {
   align-items: start;
 }
 
-.stage__title {
-  max-width: 786px;
+.main-title {
   font-family: Raleway;
   color: var(--dark-color);
   font-size: 35px;
@@ -1738,8 +1737,12 @@ body._lock {
   line-height: 120%;
   text-align: left;
 }
-.stage__title span {
+.main-title span {
   color: var(--blue-color);
+}
+
+.stage__title {
+  max-width: 786px;
 }
 
 .stage__content-center {
@@ -1878,8 +1881,10 @@ body._lock {
     width: 86px;
     height: 86px;
   }
-  .stage__title {
+  .main-title {
     font-size: 31px;
+  }
+  .stage__title {
     max-width: 707px;
   }
   .stage__side-content {
@@ -2033,11 +2038,11 @@ body._lock {
   }
 }
 @media (max-width: 518.98px) {
+  .main-title {
+    font-size: 29px;
+  }
   .stage__content-top {
     margin-bottom: 50px;
-  }
-  .stage__content-top h2 {
-    font-size: 29px;
   }
   .stage__content-top img {
     display: none;
@@ -2069,6 +2074,64 @@ body._lock {
     border-radius: 50%;
   }
 }
+.hospital {
+  position: relative;
+}
+
+.hospital__content {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+.hospital__content-ls {
+  flex: 0 1 50%;
+  background-color: var(--dark-white-color);
+  border-radius: 30px;
+  height: auto;
+  padding: 30px 30px 20px 30px;
+}
+
+.hospital__content-items {
+  margin: 80px 0 50px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.hospital__content-item {
+  display: flex;
+  flex-direction: column;
+  gap: 87px;
+  padding: 20px 30px 20px 20px;
+  background-color: var(--bg-white-color);
+  border-radius: 20px;
+}
+.hospital__content-item h3 {
+  font-family: Raleway;
+  color: var(--dark-color);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 100%;
+  line-height: 120%;
+  text-align: left;
+}
+.hospital__content-item p {
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 100%;
+  color: rgb(47, 47, 47);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 143%;
+  text-align: left;
+}
+
 :root {
   --bg-white-color: #ffffff;
   --dark-white-color: #f3f3f3;
