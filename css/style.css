@@ -2185,6 +2185,10 @@ body._lock {
   grid-row: 3/6;
 }
 
+.hospital-swiper {
+  display: none;
+}
+
 @media (max-width: 1449.98px) {
   .hospital-title {
     max-width: 482px;
@@ -2210,8 +2214,64 @@ body._lock {
   .hospital__content-item h3 {
     font-size: 22px;
   }
-  .hospital__content-item p {
-    font-size: 15px;
+}
+@media (max-width: 1182.98px) {
+  .hospital__content {
+    flex-direction: column;
+  }
+  .grid__items {
+    display: grid;
+    grid-template-columns: repeat(2, 478px);
+    grid-template-columns: minmax(271px, 50%) minmax(271px, 50%);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    height: 100%;
+    min-height: 567px;
+  }
+}
+@media (max-width: 580.98px) {
+  .hospital__content-items {
+    margin: 40px 0 30px 0;
+    gap: 20px;
+  }
+  .hospital__content-item {
+    gap: 20px;
+  }
+  .hospital__content-item h3 {
+    font-size: 19px;
+  }
+  .grid__items {
+    display: none;
+  }
+  .hospital-swiper {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .hospital-wrapper {
+    height: 430px;
+  }
+  .hospital-slide {
+    height: 408px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-scrollbar-drag {
+    background: var(--swiper-scrollbar-drag-bg-color, var(--blue-color));
+    border-radius: 0;
+  }
+  .custom-scrollbar {
+    height: 2px;
+    border-radius: 0;
+  }
+}
+@media (max-width: 524.98px) {
+  .hospital__content-items {
+    flex-direction: column;
+  }
+  .hospital__content-item h3 {
+    max-width: 191px;
   }
 }
 :root {
