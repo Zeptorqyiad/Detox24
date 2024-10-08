@@ -1509,6 +1509,110 @@
 		}
 	}
 }
+
+//==================================Price================================
+
+.price {
+	position: relative;
+}
+.price__content {
+	@include flexbox;
+	flex-direction: column;
+	gap: 80px;
+	background-color: var(--dark-white-color);
+	border-radius: 30px;
+	padding: 30px;
+	margin-top: 20px;
+}
+.price__content-top {
+	@include flexbox;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.price-title {
+	max-width: 661px;
+}
+.download__file-link {
+	position: relative;
+	box-sizing: border-box;
+	border: 1px solid var(--blue-color);
+	border-radius: 40px;
+	padding: 15px 30px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	span {
+		@include textDefault($ff1, var(--blue-color), 16px, 600, 16px);
+		line-height: 110%;
+	}
+}
+.price__columns {
+	@include flexbox;
+	flex-wrap: nowrap;
+	gap: 30px;
+}
+.price__column {
+	flex: 0 1 33.333%;
+	@include flexbox;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 20px;
+	background: var(--bg-white-color);
+	img {
+		object-fit: contain;
+		width: 100%;
+	}
+}
+.price__column-title {
+	margin: 18px 0 14px 0;
+	@include textDefault($ff2, var(--dark-color), 30px, 600, 30px);
+	line-height: 120%;
+	text-align: left;
+}
+.price__elements {
+	@include flexbox;
+	flex-wrap: wrap;
+	gap: 10px;
+	max-height: 61px;
+	span {
+		box-sizing: border-box;
+		padding: 5px 10px;
+		border: 1px solid var(--light-blue-color);
+		border-radius: 100px;
+		@include textDefault($ff1, var(--light-blue-color), 14px, 400, 14px);
+		line-height: 143%;
+		text-align: left;
+		cursor: pointer;
+	}
+}
+.price__column-text {
+	margin: 25px 0 30px 0;
+	@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
+	line-height: 143%;
+	text-align: left;
+}
+.price__block-btn {
+	@include flexbox;
+	align-items: center;
+	gap: 15px;
+	background: var(--dark-white-color);
+	border-radius: 200px;
+	padding-right: 15px;
+}
+.price__btn {
+	white-space: nowrap;
+	width: 100%;
+}
+.price__count-text {
+	@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
+	line-height: 110%;
+	white-space: nowrap;
+}
+
+//=================================Price Media===========================
+@media (max-width: $md2) {
+}
 //=======================================================================
 
 // TODO: Hover effect on icon VK, TG
