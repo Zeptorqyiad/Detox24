@@ -1601,7 +1601,6 @@
 	padding-right: 15px;
 }
 .price__btn {
-	white-space: nowrap;
 	width: 100%;
 }
 .price__count-text {
@@ -1612,6 +1611,60 @@
 
 //=================================Price Media===========================
 @media (max-width: $md2) {
+	.price-title {
+		max-width: 595px;
+	}
+	.price__column-title {
+		font-size: 27px;
+	}
+	.price__column-text,
+	.price__count-text {
+		font-size: 15px;
+	}
+	.download__file-link {
+		padding: 14px 25px;
+		gap: 9px;
+		span {
+			font-size: 15px;
+		}
+	}
+}
+@media (max-width: 1311.98px) {
+	.price__columns {
+		gap: 25px;
+	}
+	.price__column-title {
+		font-size: 22px;
+	}
+	.price__elements {
+		gap: 9px;
+		max-height: 61px;
+		span {
+			padding: 4px 9px;
+			border-radius: 90px;
+			@include textDefault($ff1, var(--light-blue-color), 12px, 400, 12px);
+			line-height: 143%;
+			text-align: center;
+		}
+	}
+}
+@media (max-width: 1298.98px) {
+	.price__content {
+		gap: 75px;
+	}
+	.price__columns {
+		gap: 20px;
+	}
+	.price__column-title {
+		font-size: 19px;
+	}
+	.price__btn {
+		font-size: 15px;
+		padding: 14px 15px;
+	}
+	.price__block-btn {
+		padding-right: 13px;
+	}
 }
 //=======================================================================
 

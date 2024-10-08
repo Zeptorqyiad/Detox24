@@ -2391,7 +2391,6 @@ body._lock {
 }
 
 .price__btn {
-  white-space: nowrap;
   width: 100%;
 }
 
@@ -2405,6 +2404,66 @@ body._lock {
   white-space: nowrap;
 }
 
+@media (max-width: 1440.98px) {
+  .price-title {
+    max-width: 595px;
+  }
+  .price__column-title {
+    font-size: 27px;
+  }
+  .price__column-text,
+  .price__count-text {
+    font-size: 15px;
+  }
+  .download__file-link {
+    padding: 14px 25px;
+    gap: 9px;
+  }
+  .download__file-link span {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1311.98px) {
+  .price__columns {
+    gap: 25px;
+  }
+  .price__column-title {
+    font-size: 22px;
+  }
+  .price__elements {
+    gap: 9px;
+    max-height: 61px;
+  }
+  .price__elements span {
+    padding: 4px 9px;
+    border-radius: 90px;
+    font-family: Inter;
+    color: var(--light-blue-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    line-height: 143%;
+    text-align: center;
+  }
+}
+@media (max-width: 1298.98px) {
+  .price__content {
+    gap: 75px;
+  }
+  .price__columns {
+    gap: 20px;
+  }
+  .price__column-title {
+    font-size: 19px;
+  }
+  .price__btn {
+    font-size: 15px;
+    padding: 14px 15px;
+  }
+  .price__block-btn {
+    padding-right: 13px;
+  }
+}
 :root {
   --bg-white-color: #ffffff;
   --dark-white-color: #f3f3f3;
