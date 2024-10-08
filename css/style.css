@@ -2525,6 +2525,88 @@ body._lock {
     max-height: 61px;
   }
 }
+.faq__content {
+  margin-top: 20px;
+  width: 100%;
+}
+
+details {
+  display: block;
+  background: var(--dark-white-color);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::-moz-list-bullet {
+  list-style-type: none;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary {
+  display: block;
+  padding: 30px;
+  cursor: pointer;
+  position: relative;
+  font-family: Raleway;
+  color: var(--dark-color);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 100%;
+  line-height: 120%;
+  text-align: left;
+}
+
+summary:before {
+  top: 30px;
+  right: 30px;
+  color: transparent;
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%2218.664551%22%20height%3D%229.042603%22%20viewBox%3D%220%200%2018.6646%209.0426%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%3E%3Cdefs%2F%3E%3Cpath%20id%3D%22Vector%204%22%20d%3D%22M0.33%200.37L9.33%208.37L18.33%200.37%22%20stroke%3D%22%231D69D8%22%20stroke-opacity%3D%221.000000%22%20stroke-width%3D%221.000000%22%2F%3E%3C%2Fsvg%3E") no-repeat 50% 50%/auto;
+  width: 18px;
+  height: 8px;
+  content: "";
+  position: absolute;
+  transition: transform 0.5s;
+}
+
+details[open] > summary:before {
+  transform: scale(1, -1);
+}
+
+summary ~ * {
+  padding: 0px 30px 30px 30px;
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  line-height: 143%;
+  text-align: left;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+summary:focus {
+  outline: 0;
+}
+
 :root {
   --bg-white-color: #ffffff;
   --dark-white-color: #f3f3f3;
