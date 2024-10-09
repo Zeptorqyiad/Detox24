@@ -18,6 +18,11 @@ body {
 	font-weight: 400;
 }
 
+html,
+body {
+	scroll-behavior: smooth;
+}
+
 body._lock {
 	overflow: hidden;
 }

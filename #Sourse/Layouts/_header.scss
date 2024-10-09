@@ -64,6 +64,15 @@
 		background-color: #104ea8;
 	}
 }
+.icon-header #VectorVk,
+#VectorTg {
+	transition: fill 0.3s ease;
+}
+.icon-header #VectorVk:hover,
+#VectorTg:hover {
+	fill: var(--blue-color);
+}
+
 //================================Header Media===========================
 // 1440
 @media (max-width: $md2) {

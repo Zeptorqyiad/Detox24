@@ -171,6 +171,16 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #104ea8;
 }
 
+.icon-header #VectorVk,
+#VectorTg {
+  transition: fill 0.3s ease;
+}
+
+.icon-header #VectorVk:hover,
+#VectorTg:hover {
+  fill: var(--blue-color);
+}
+
 @media (max-width: 1440.98px) {
   .header {
     padding-top: 27px;
@@ -470,6 +480,11 @@ body {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 body._lock {
@@ -2533,9 +2548,9 @@ body._lock {
 details {
   display: block;
   background: var(--dark-white-color);
-  border-radius: 8px;
+  border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
 }
 
 summary::-webkit-details-marker {
@@ -2607,6 +2622,51 @@ summary:focus {
   outline: 0;
 }
 
+@media (max-width: 1440.98px) {
+  summary {
+    padding: 30px;
+    font-size: 22px;
+  }
+  summary ~ * {
+    padding: 0px 30px 30px 30px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200.98px) {
+  summary {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 22px;
+  }
+  summary ~ * {
+    padding: 0px 25px 30px 25px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024.98px) {
+  summary {
+    font-size: 19px;
+  }
+}
+@media (max-width: 700px) {
+  summary {
+    padding: 20px;
+    font-size: 15px;
+  }
+  summary ~ * {
+    padding: 0px 20px 20px 20px;
+    font-size: 14px;
+  }
+  summary:before {
+    top: 20px;
+    right: 20px;
+  }
+}
+@media (max-width: 529.98px) {
+  summary p {
+    width: 273px;
+  }
+}
 :root {
   --bg-white-color: #ffffff;
   --dark-white-color: #f3f3f3;

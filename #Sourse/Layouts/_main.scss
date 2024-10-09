@@ -1731,12 +1731,9 @@
 details {
 	display: block;
 	background: var(--dark-white-color);
-	// box-shadow:
-	// 	0 10px 15px -5px rgba(0, 0, 0, 0.1),
-	// 	0 10px 10px -5px rgba(0, 0, 0, 0.04);
-	border-radius: 8px;
+	border-radius: 30px;
 	overflow: hidden;
-	margin-bottom: 1.5rem;
+	margin-bottom: 10px;
 }
 summary::-webkit-details-marker {
 	display: none;
@@ -1791,11 +1788,57 @@ details[open] summary ~ * {
 summary:focus {
 	outline: 0;
 }
+//===============================FAQ Media===============================
+
+@media (max-width: $md2) {
+	summary {
+		padding: 30px;
+		font-size: 22px;
+	}
+	summary ~ * {
+		padding: 0px 30px 30px 30px;
+		font-size: 16px;
+	}
+}
+@media (max-width: $md3) {
+	summary {
+		padding-left: 25px;
+		padding-right: 25px;
+		font-size: 22px;
+	}
+	summary ~ * {
+		padding: 0px 25px 30px 25px;
+		font-size: 16px;
+	}
+}
+@media (max-width: $md4) {
+	summary {
+		font-size: 19px;
+	}
+}
+@media (max-width: 700px) {
+	summary {
+		padding: 20px;
+		font-size: 15px;
+	}
+	summary ~ * {
+		padding: 0px 20px 20px 20px;
+		font-size: 14px;
+	}
+	summary:before {
+		top: 20px;
+		right: 20px;
+	}
+}
+@media (max-width: 529.98px) {
+	summary p {
+		width: 273px;
+	}
+}
 
 //=======================================================================
 // TODO: Hover effect on icon VK, TG
 // TODO: Hover effect on downloadBtn
-// TODO: Scroll to link section
 // ? php code post method form
 // !: Autoprefixer on tel input
 // !: Burger button close rebuild
