@@ -3265,6 +3265,16 @@ summary:focus {
   transform: translate(0px, -100%);
 }
 
+.image-popup {
+  padding: 15px;
+  width: 630px;
+  height: 100%;
+  border-radius: 30px;
+}
+.image-popup img {
+  border-radius: 30px;
+}
+
 .popup__close {
   position: absolute;
   top: 47px;
@@ -3398,6 +3408,15 @@ summary:focus {
     transition: all 0.8s ease 0s;
     opacity: 0;
     transform: translate(0px, -100%);
+  }
+  .image-popup {
+    padding: 10px;
+    width: 355px;
+    height: 100%;
+    border-radius: 17px;
+  }
+  .image-popup img {
+    border-radius: 17px;
   }
   .popup__close {
     position: absolute;
