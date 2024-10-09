@@ -19,6 +19,7 @@
 }
 .header__menu {
 	@include flexbox();
+	box-sizing: border-box;
 	align-items: center;
 	gap: 20px;
 }
@@ -33,6 +34,7 @@
 	margin-right: 30px;
 }
 .menu__list {
+	box-sizing: border-box;
 	@include flexbox();
 	gap: 11px;
 	span {
@@ -45,6 +47,7 @@
 	gap: 9px;
 }
 .menu__link {
+	box-sizing: border-box;
 	@include textDefault($ff1, var(--dark-color), 15px, 400, 17px);
 	line-height: 143%;
 	transition: font-weight 0.2s;

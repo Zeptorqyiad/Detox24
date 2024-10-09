@@ -120,3 +120,22 @@ function accordion(event) {
       details[i].removeAttribute('open')
    }
 }
+
+// Hidden block
+
+const openBtn = document.querySelector('.openBtn-1')
+const hiddenText = document.querySelector('.hidden__text-1')
+
+openBtn.onclick = function () {
+   hiddenText.style.opacity = '1'
+   hiddenText.style.visibility = 'visible'
+   openBtn.style.display = 'none'
+}
+
+const openBtn2 = document.querySelector('.openBtn-2')
+const hiddenText2 = document.querySelector('.hidden__text-2')
+
+openBtn2.onclick = function () {
+   hiddenText2.style.display = 'block'
+   openBtn2.style.display = 'none'
+}

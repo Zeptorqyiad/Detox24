@@ -1235,12 +1235,11 @@
 	.stage-line::before {
 		content: "";
 		position: absolute;
-		top: 0;
+		top: 12px;
 		left: 50%;
 		width: 23px;
 		height: 23px;
-		transform: translate(-50%, 0);
-		transform: rotate(90deg);
+		transform: translate(-50%, -50%) rotate(90deg);
 	}
 	.stage__subtitle-text {
 		max-height: 84px;
@@ -1926,12 +1925,15 @@ summary:focus {
 	background-color: var(--blue-color);
 	color: var(--bg-white-color);
 }
-.reviews-rs {
-	position: relative;
+.reviews__content-rightside {
+	overflow: hidden;
+}
+.reviews-rs-min {
+	display: none;
 }
 .reviews-rs__items {
+	position: relative;
 	@include flexbox;
-	overflow: hidden;
 	gap: 30px;
 	left: 0;
 }
@@ -1976,8 +1978,72 @@ summary:focus {
 		line-height: 143%;
 	}
 }
+.review-swiper {
+	display: none;
+}
+.hidden__text-1 {
+	opacity: 0;
+	visibility: hidden;
+}
+.review__text-hidden-2 {
+	display: none;
+}
+.openBtn-2 {
+	cursor: pointer;
+}
 //===============================Review Media==================================
-
+@media (max-width: $md2) {
+	.reviews__content {
+		gap: 85px;
+	}
+	.reviews-rs__items {
+		gap: 27px;
+	}
+}
+@media (max-width: 750px) {
+	.reviews__content-rightside {
+		display: none;
+	}
+	.reviews-rs-min {
+		display: block;
+		margin-top: 50px;
+	}
+	.reviews__btn {
+		padding: 13px 45px;
+		border-radius: 36px;
+		max-height: 44px;
+		text-align: center;
+		margin-top: 50px;
+	}
+	.reviews-title {
+		max-width: 280px;
+	}
+	.reviews-ls_arrow-block,
+	.reviews__content-rightside {
+		display: none;
+	}
+	.review__item-top-block {
+		margin-bottom: 60px;
+	}
+	.review__item-bottom-text {
+		font-size: 15px;
+	}
+	.review-swiper {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.review-wrapper {
+		height: 500px;
+	}
+	.review-slide {
+		height: 453px;
+		width: 315px;
+		padding: 20px;
+		background-color: var(--dark-white-color);
+		border-radius: 30px;
+	}
+}
 //=======================================================================
 // TODO: Hover effect on downloadBtn
 // ? php code post method form
