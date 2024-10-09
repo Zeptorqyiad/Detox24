@@ -15,67 +15,50 @@
 	border-radius: 30px;
 	padding: 25px 20px 20px 25px;
 	@include flexbox;
-	gap: 69px;
+	justify-content: space-between;
 }
 .block-text {
 	@include flexbox;
 	flex-direction: column;
-	justify-content: space-between;
-	max-width: 424px;
+	gap: 40px;
+	flex: 0 0 424px;
 }
 .block-text__title {
 	h6 {
-		color: rgb(47, 47, 47);
-		font-family: Raleway;
-		font-size: 20px;
-		font-weight: 600;
+		@include textDefault($ff2, var(--dark-color), 20px, 600, 20px);
 		line-height: 120%;
 		text-align: left;
 		margin-bottom: 10px;
 	}
 }
 .block-text__tel {
-	color: rgb(29, 105, 216);
-	font-family: Inter;
-	font-size: 45px;
-	font-weight: 600;
+	@include textDefault($ff1, var(--blue-color), 45px, 600, 45px);
 	line-height: 120%;
 	text-align: left;
 }
 .block-text__email {
 	p {
-		color: rgb(47, 47, 47);
-		font-family: Raleway;
-		font-size: 20px;
-		font-weight: 600;
+		@include textDefault($ff2, var(--dark-color), 20px, 600, 20px);
 		line-height: 120%;
 		text-align: left;
 		margin-bottom: 10px;
 	}
 	a {
-		color: rgb(29, 105, 216);
-		font-family: Inter;
-		font-size: 20px;
+		@include textDefault($ff1, var(--blue-color), 20px, 400, 20px);
 		font-weight: 400;
 		line-height: 120%;
 		text-align: left;
 	}
 }
 address {
-	color: rgb(29, 105, 216);
-	font-family: Inter;
-	font-size: 20px;
-	font-weight: 400;
+	@include textDefault($ff1, var(--blue-color), 20px, 400, 20px);
 	line-height: 140%;
 	text-align: left;
 	font-style: normal;
 }
 .block-text__adress {
 	p {
-		color: rgb(47, 47, 47);
-		font-family: Raleway;
-		font-size: 20px;
-		font-weight: 600;
+		@include textDefault($ff2, var(--dark-color), 20px, 600, 20px);
 		line-height: 120%;
 		text-align: left;
 		margin-bottom: 10px;
@@ -83,16 +66,10 @@ address {
 }
 .footer__block-map {
 	position: relative;
-	width: 100%;
+	max-width: 100%;
 	border-radius: 20px;
-	&::before {
-		content: "";
-		@include bgImage("../../assets/images/footer/frame.svg", left top, no-repeat, auto);
-		position: absolute;
+	img {
 		width: 100%;
-		height: 100%;
-		top: 30%;
-		left: 30%;
 	}
 }
 .license {
@@ -105,17 +82,135 @@ address {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-	row-gap: 26px;
+	gap: 26px;
+	a img {
+		width: 100%;
+	}
 	h4 {
-		color: rgb(47, 47, 47);
-		font-family: Raleway;
-		font-size: 20px;
-		font-weight: 600;
+		@include textDefault($ff2, var(--dark-color), 20px, 600, 20px);
 		line-height: 120%;
-		letter-spacing: 0%;
 		text-align: left;
 	}
 }
-.popup-link-2 {
+@media (min-width: 1441px) {
+	.license__block {
+		a img {
+			width: 100%;
+			max-height: 188px;
+		}
+	}
+}
+@media (max-width: 1440px) {
+	.block-text {
+		gap: 35px;
+	}
+	.block-text__title {
+		h6 {
+			@include textDefault($ff2, var(--dark-color), 18px, 600, 18px);
+			margin-bottom: 9px;
+		}
+	}
+	.block-text__tel {
+		@include textDefault($ff1, var(--blue-color), 40px, 600, 40px);
+	}
+	.block-text__email {
+		p {
+			@include textDefault($ff2, var(--dark-color), 18px, 600, 18px);
+			margin-bottom: 8px;
+		}
+		a {
+			@include textDefault($ff1, var(--blue-color), 18px, 400, 18px);
+			text-align: left;
+		}
+	}
+	address {
+		@include textDefault($ff1, var(--blue-color), 18px, 400, 18px);
+	}
+	.block-text__adress {
+		p {
+			@include textDefault($ff2, var(--dark-color), 18px, 600, 18px);
+			margin-bottom: 8px;
+		}
+	}
+	.license {
+		padding: 25px;
+	}
+}
+@media (max-width: $md3) {
+	.block-text {
+		gap: 25px;
+	}
+}
+@media (max-width: 1148px) {
+	.block-text {
+		gap: 0;
+		max-width: 322px;
+		justify-content: space-between;
+	}
+	.block-text__title {
+		h6 {
+			@include textDefault($ff2, var(--dark-color), 18px, 600, 18px);
+		}
+	}
+	.block-text__tel {
+		@include textDefault($ff1, var(--blue-color), 30px, 600, 30px);
+	}
+	.block-text__email {
+		p {
+			@include textDefault($ff2, var(--dark-color), 18px, 600, 18px);
+			margin-bottom: 8px;
+		}
+		a {
+			@include textDefault($ff1, var(--blue-color), 16px, 400, 16px);
+			text-align: left;
+		}
+	}
+	address {
+		@include textDefault($ff1, var(--blue-color), 16px, 400, 16px);
+	}
+	.block-text__adress {
+		p {
+			@include textDefault($ff2, var(--dark-color), 18px, 600, 18px);
+			margin-bottom: 8px;
+		}
+	}
+	.license {
+		padding: 30px 10px;
+	}
+	.license__block {
+		h4 {
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 1002.98px) {
+	.footer__block-map {
+		display: none;
+	}
+}
+@media (max-width: 755.98px) {
+	.footer__content {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.footer__content-ls {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.block-text {
+		gap: 20px;
+		max-width: 322px;
+		flex: 0 0 auto;
+		justify-content: normal;
+	}
+	.footer__block-map {
+		display: block;
+	}
+}
+@media (max-width: $minwidth) {
+	.footer__block-map img {
+		height: 294px;
+		object-fit: cover;
+	}
 }
 //=======================================================================
