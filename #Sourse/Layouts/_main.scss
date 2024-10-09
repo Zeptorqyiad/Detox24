@@ -1536,6 +1536,7 @@
 	position: relative;
 	box-sizing: border-box;
 	border: 1px solid var(--blue-color);
+	background-color: inherit;
 	border-radius: 40px;
 	padding: 15px 30px;
 	text-align: center;
@@ -1545,8 +1546,13 @@
 	span {
 		@include textDefault($ff1, var(--blue-color), 16px, 600, 16px);
 		line-height: 110%;
+		transition: color 0.3s;
+		will-change: color;
 	}
+	transition: background-color 0.3s;
+	will-change: background-color;
 }
+
 .price__columns {
 	@include flexbox;
 	flex-wrap: nowrap;
@@ -1836,8 +1842,143 @@ summary:focus {
 	}
 }
 
+//===============================Review========================================
+.reviews {
+	position: relative;
+	padding-bottom: 180px;
+	border-radius: 0px 0px 36px 36px;
+}
+.reviews__content {
+	margin-top: 20px;
+	@include flexbox;
+	gap: 116px;
+	overflow: hidden;
+}
+.reviews__content-leftside {
+	@include flexbox;
+	flex-direction: column;
+	width: 100%;
+}
+.reviews-ls {
+	flex: 0 0 275px;
+}
+.reviews-title {
+	margin-bottom: 20px;
+}
+.reviews-ls_arrow-block {
+	@include flexbox;
+	gap: 6px;
+}
+.arrow-left {
+	@include flexbox;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--blue-color);
+	border: none;
+	cursor: pointer;
+	opacity: 1;
+	img {
+		width: 12px;
+		height: 10px;
+	}
+}
+.arrow-right {
+	@include flexbox;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: var(--blue-color);
+	border: none;
+	cursor: pointer;
+	opacity: 1;
+	img {
+		transform: rotate(180deg);
+	}
+}
+.arrow-left:disabled,
+.arrow-right:disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+.reviews__btn {
+	padding: 13px 45px;
+	@include textDefault($ff1, var(--blue-color), 16px, 500, 15px);
+	background: inherit;
+	line-height: 110%;
+	box-sizing: border-box;
+	background-color: inherit;
+	border: 0.9px solid var(--blue-color);
+	border-radius: 36px;
+	max-height: 44px;
+	text-align: center;
+	margin-top: 100%;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	will-change: background-color, color;
+}
+.reviews__btn:hover {
+	background-color: var(--blue-color);
+	color: var(--bg-white-color);
+}
+.reviews-rs {
+	position: relative;
+}
+.reviews-rs__items {
+	@include flexbox;
+	overflow: hidden;
+	gap: 30px;
+	left: 0;
+}
+.reviews-rs__item {
+	background-color: var(--dark-white-color);
+	border-radius: 30px;
+	padding: 18px;
+	flex: 0 0 363px;
+}
+.review__item-top-block {
+	@include flexbox;
+	flex-wrap: nowrap;
+	gap: 18px;
+	margin-bottom: 72px;
+}
+.review__item-top-block_info {
+	@include flexbox;
+	flex-direction: column;
+	img {
+		max-width: 81px;
+		max-height: 81px;
+	}
+}
+.review__name-info {
+	@include textDefault($ff1, var(--dark-color), 20px, 500, 20px);
+	line-height: 120%;
+	text-align: left;
+	margin-bottom: 3px;
+}
+.review__year-info {
+	@include textDefault($ff1, var(--dark-color), 16px, 500, 16px);
+	opacity: 0.2;
+	margin-bottom: 10px;
+}
+.review__item-bottom-text {
+	@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
+	line-height: 143%;
+	text-align: left;
+	a {
+		@include textDefault($ff1, #1d69d8, 16px, 400, 16px);
+		font-weight: 400;
+		line-height: 143%;
+	}
+}
+//===============================Review Media==================================
+
 //=======================================================================
-// TODO: Hover effect on icon VK, TG
 // TODO: Hover effect on downloadBtn
 // ? php code post method form
 // !: Autoprefixer on tel input
