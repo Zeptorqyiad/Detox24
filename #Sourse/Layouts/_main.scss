@@ -1598,25 +1598,77 @@
 	text-align: left;
 }
 .price__block-btn {
+	position: relative;
 	width: 100%;
 	@include flexbox;
-	align-items: center;
+	align-items: flex-end;
 	align-self: flex-end;
 	gap: 15px;
-	background: var(--dark-white-color);
 	border-radius: 200px;
 	padding-right: 15px;
 }
 .price__btn {
 	width: 100%;
 }
+.ease-btn::after {
+	content: "От 2500₽";
+	position: absolute;
+	height: 100%;
+	top: 5%;
+	right: 15px;
+	color: var(--blue-color);
+	font-weight: 500;
+}
+.medium-btn::after {
+	content: "От 3500₽";
+	position: absolute;
+	height: 100%;
+	top: 5%;
+	right: 15px;
+	color: var(--blue-color);
+	font-weight: 500;
+}
+.hard-btn::after {
+	content: "От 5000₽";
+	position: absolute;
+	height: 100%;
+	top: 5%;
+	right: 20px;
+	color: var(--blue-color);
+	font-weight: 500;
+}
 .price__count-text {
 	@include textDefault($ff1, var(--dark-color), 16px, 400, 16px);
 	line-height: 110%;
 	white-space: nowrap;
+	text-decoration: line-through;
+	opacity: 0.3;
 }
 .download__file-link-min {
 	display: none;
+}
+.download__file-link-min:hover .download__price-image #Rectangle109,
+.download__file-link-min:hover .download__price-image #VectorArrow,
+.download__file-link:hover .download__price-image #Rectangle109,
+.download__file-link:hover .download__price-image #VectorArrow {
+	transition:
+		fill 0.2s,
+		stroke 0.2s;
+}
+.download__file-link-min:hover .download__price-image #Rectangle109,
+.download__file-link-min:hover .download__price-image #VectorArrow,
+.download__file-link:hover .download__price-image #Rectangle109,
+.download__file-link:hover .download__price-image #VectorArrow {
+	stroke: #ffffff;
+	fill: #ffffff;
+}
+.download__file-link-min:hover span,
+.download__file-link:hover span {
+	color: var(--bg-white-color);
+}
+.download__file-link-min:hover,
+.download__file-link:hover {
+	background-color: var(--blue-color);
 }
 //=================================Price Media===========================
 @media (max-width: $md2) {
@@ -1674,6 +1726,18 @@
 	.price__block-btn {
 		padding-right: 13px;
 	}
+	.ease-btn::after {
+		top: 5%;
+		right: 10px;
+	}
+	.medium-btn::after {
+		top: 5%;
+		right: 10px;
+	}
+	.hard-btn::after {
+		top: 5%;
+		right: 15px;
+	}
 }
 @media (max-width: $md4) {
 	.price__content {
@@ -1713,6 +1777,21 @@
 			@include textDefault($ff1, var(--blue-color), 16px, 600, 16px);
 			line-height: 110%;
 		}
+	}
+	.ease-btn::after {
+		top: 5%;
+		right: 13px;
+		font-size: 15px;
+	}
+	.medium-btn::after {
+		top: 5%;
+		right: 13px;
+		font-size: 15px;
+	}
+	.hard-btn::after {
+		top: 5%;
+		right: 20px;
+		font-size: 15px;
 	}
 }
 @media (max-width: 420.98px) {
@@ -2053,7 +2132,5 @@ summary:focus {
 }
 //=======================================================================
 // TODO: Hover effect on downloadBtn
-// ? php code post method form
 // !: Autoprefixer on tel input
 // !: Burger button close rebuild
-// !: Change price after button in Price section
