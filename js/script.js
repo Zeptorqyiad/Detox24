@@ -139,3 +139,4 @@ openBtn2.onclick = function () {
    hiddenText2.style.display = 'block'
    openBtn2.style.display = 'none'
 }
+

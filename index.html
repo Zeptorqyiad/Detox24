@@ -919,7 +919,8 @@
 							</div>
 							<div class="popup-form_item">
 								<label for="telInp"></label>
-								<input id="telInp" type="number" name="telephone" placeholder="+7 (999) 999-99-99*" required>
+								<input id="telInp" type="number" autocomplete="tel" class="tel" name="telephone"
+									placeholder="+7 (999) 999-99-99*" required>
 							</div>
 							<style>
 								input::-webkit-outer-spin-button,
@@ -963,11 +964,12 @@
 			</div>
 		</div>
 	</div>
-	<!-- Подключаем Swiper -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<!-- Подключаем файл JS скриптов -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 	<script defer src="./js/swiper.js"></script>
+	<script src="./js/imasked.js"></script>
+	<script src="./js/imasked.min.js"></script>
 </body>
 
 </html>
