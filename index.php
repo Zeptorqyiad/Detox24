@@ -356,7 +356,7 @@
 								выводу из запоя предоставляются по
 								<span>прозрачным и доступным ценам</span>
 							</h2>
-							<a href="##" class="download__file-link" download="priceFile">
+							<a href="./assets/Detox24Price.pdf" class="download__file-link" download="Detox24Price.pdf">
 								<svg class="download__price-image" width="24.500000" height="16.750000" viewBox="0 0 24.5 16.75"
 									fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<defs />
