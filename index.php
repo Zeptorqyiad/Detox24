@@ -51,7 +51,7 @@
 								<a href="#reviews" class="burger__link-min"><span>/ Отзывы</span></a>
 								<div class="menu__icon-bottom">
 									<p>Позвоните нам</p>
-									<a href="tel:88002003030">8 (800) 200-30-30</a>
+									<a href="tel:88002003030" style="opacity: 0;visibility: hidden;">8 (800) 200-30-30</a>
 									<div class="header__social-icon-min">
 										<a href="##"><img src="./assets/icon/VK-min.svg" alt="VK" class="icon-min-burger"></a>
 										<a href="##"><img src="./assets/icon/Tg-min.svg" alt="Telegram"
@@ -73,7 +73,7 @@
 								<li><a href="#reviews" class="menu__link">Отзывы</a></li>
 							</ul>
 						</nav>
-						<a href="tel:88002003030" class="header__tel">8 (800) 200-30-30</a>
+						<a href="tel:88002003030" class="header__tel" style="opacity: 0;visibility: hidden;">8 (800) 200-30-30</a>
 						<div class="header__social-icon">
 							<a href="##">
 								<svg class="icon-header" width="26.000000" height="26.000000" viewBox="0 0 26 26" fill="none"
@@ -843,7 +843,8 @@
 				<div class="footer__content">
 					<div class="footer__content-ls">
 						<div class="footer__block-text block-text">
-							<div class="block-text__title">
+							<!-- opacity 0 vis: hidden -->
+							<div class="block-text__title" style="visibility: hidden; opacity: 0;">
 								<h6>Позвоните нам</h6>
 								<a href="tel:88002003030" class="block-text__tel">8 (800) 200-30-30</a>
 							</div>
