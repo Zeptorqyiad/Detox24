@@ -424,7 +424,8 @@
 									</div>
 								</li>
 							</ul>
-							<a href="##" class="download__file-link-min" download="priceFile">
+							<a href="./assets/Detox24Price.pdf" class="download__file-link-min"
+								download="./assets/Detox24Price.pdf">
 								<svg class="download__price-image" width="24.500000" height="16.750000" viewBox="0 0 24.5 16.75"
 									fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 									<defs />
@@ -686,9 +687,9 @@
 										</p>
 									</div>
 								</div>
-								<div class="swiper-scrollbar custom-scrollbar"></div>
+								<!-- <div class="swiper-scrollbar custom-scrollbar custom-review-scrollbar"></div> -->
 							</div>
-							<a href="##" class="reviews__btn">Оставить отзыв</a>
+							<a href="#popup-5" class="reviews__btn popup-link">Оставить отзыв</a>
 						</div>
 						<div class="reviews__content-rightside reviews-rs">
 							<div class="reviews-rs__items">
@@ -746,7 +747,8 @@
 								</div>
 								<div class="reviews-rs__item">
 									<div class="review__item-top-block">
-										<img src="./assets/images/main/review3.png" alt="Review image">
+										<img src="./assets/images/main/review3.png" style="border-radius: 50%;"
+											alt="Review image">
 										<div class="review__item-top-block_info">
 											<p class="review__name-info">Александр В.</p>
 											<span class="review__year-info">42 года</span>
@@ -946,8 +948,17 @@
 						</form>
 					</div>
 					<span class="popup-politic">
-						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="##">политикой конфиденциальности</a>
+						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="#popup-politic" class="popup-link">политикой
+							конфиденциальности</a>
 					</span>
+				</div>
+			</div>
+		</div>
+		<div id="popup-politic" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#" class="popup__close close-popup"></a>
+					<h3>Политика конфиденциальности</h3>
 				</div>
 			</div>
 		</div>
@@ -975,13 +986,19 @@
 				</div>
 			</div>
 		</div>
+		<div id="popup-5" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#" class="popup__close close-popup"></a>
+					<h3>Оставьте отзыв</h3>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- Подключаем файл JS скриптов -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 	<script defer src="./js/swiper.js"></script>
-	<script src="./js/imasked.js"></script>
-	<script src="./js/imasked.min.js"></script>
 </body>
 
 </html>

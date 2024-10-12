@@ -57,7 +57,7 @@ function popupOpen(curentPopup) {
    if (curentPopup && unlock) {
       const popupActive = document.querySelector('.popup.open')
       if (popupActive) {
-         popupCLose(popupActive, active)
+         popupCLose(popupActive, open)
       }
       curentPopup.classList.add('open')
       curentPopup.addEventListener('click', function (e) {
@@ -139,4 +139,3 @@ openBtn2.onclick = function () {
    hiddenText2.style.display = 'block'
    openBtn2.style.display = 'none'
 }
-

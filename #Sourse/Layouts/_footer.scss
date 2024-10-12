@@ -201,10 +201,8 @@ address {
 	.license {
 		padding: 30px 10px;
 	}
-	.license__block {
-		h4 {
-			font-size: 16px;
-		}
+	.license__block h4 {
+		font-size: 16px;
 	}
 }
 @media (max-width: 1002.98px) {
@@ -216,6 +214,9 @@ address {
 	.footer__content {
 		flex-direction: column;
 		gap: 20px;
+	}
+	.license__block h4 {
+		font-size: 26px;
 	}
 	.footer__content-ls {
 		flex-direction: column;
@@ -246,6 +247,9 @@ address {
 @media (max-width: 344px) {
 	.block-text__tel {
 		font-size: 24px;
+	}
+	.license__block h4 {
+		font-size: 1em;
 	}
 }
 //=======================================================================
