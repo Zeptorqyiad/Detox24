@@ -920,25 +920,18 @@
 						<p>
 							Укажите свои контакты и мы сразу свяжемся с Вами.
 						</p>
-						<form method="post" class="popup-form">
+						<form action="#" id="form" method="post" class="popup-form">
 							<div class="popup-form_item">
 								<label for="nameInp"></label>
-								<input id="nameInp" type="text" name="name" placeholder="Ваше имя*" required>
+								<input id="nameInp" type="text" name="name" class="form__input _req" placeholder="Ваше имя*">
 							</div>
 							<div class="popup-form_item">
 								<label for="telInp"></label>
-								<input id="telInp" type="number" autocomplete="tel" class="tel" name="telephone"
-									placeholder="+7 (999) 999-99-99*" required>
+								<input id="telInp" type="number" class="form__input _req" name="telephone"
+									placeholder="+7 (999) 999-99-99*">
 							</div>
-							<style>
-								input::-webkit-outer-spin-button,
-								input::-webkit-inner-spin-button {
-									-webkit-appearance: none;
-									margin: 0;
-								}
-							</style>
-							<textarea placeholder="Комментарий" style="resize: none;" required></textarea>
-							<button type="submit" class="header__btn popup__btn">Вызвать врача</button>
+							<textarea placeholder="Комментарий" class="form__textarea _req" style="resize: none;"></textarea>
+							<button type="submit" class="header__btn popup__btn form__button">Вызвать врача</button>
 						</form>
 					</div>
 					<span class="popup-politic">
@@ -993,6 +986,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="js/script.js"></script>
 	<script defer src="./js/swiper.js"></script>
+	<script defer src="./js/mailSender.js"></script>
 </body>
 
 </html>
