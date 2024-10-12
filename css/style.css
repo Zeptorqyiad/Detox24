@@ -3260,6 +3260,12 @@ summary:focus {
   display: none;
 }
 
+.review__profil-img {
+  max-width: 90px;
+  max-height: 90px;
+  border-radius: 50%;
+}
+
 .reviews-rs__items {
   position: relative;
   display: flex;
