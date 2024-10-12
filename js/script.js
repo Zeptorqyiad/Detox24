@@ -2,20 +2,41 @@
 const burgerLine = document.querySelector('.burger__list')
 const burgerMenu = document.querySelector('.menu__icon')
 const burgerBlock = document.querySelector('.icon-menu')
+const burgerIconMin = document.querySelector('.close__icon-burger')
 
 burgerLine.addEventListener('click', () => {
    if (burgerLine) {
-      burgerLine.classList.toggle('active')
-      burgerMenu.classList.toggle('active')
-      burgerBlock.classList.toggle('active')
-      document.body.classList.toggle('_lock')
+      burgerLine.classList.add('active')
+      burgerMenu.classList.add('active')
+      burgerBlock.classList.add('active')
+      document.body.classList.add('_lock')
    }
 })
+
+burgerIconMin.addEventListener('click', () => {
+   if (burgerIconMin) {
+      burgerLine.classList.remove('active')
+      burgerMenu.classList.remove('active')
+      burgerBlock.classList.remove('active')
+      document.body.classList.remove('_lock')
+   }
+})
+
+let burgerText = document.querySelectorAll('.burger__link-min')
+burgerText.forEach((btn) => btn.addEventListener('click', closeParentBlock))
+
+function closeParentBlock() {
+   burgerLine.classList.remove('active')
+   burgerMenu.classList.remove('active')
+   burgerBlock.classList.remove('active')
+   document.body.classList.remove('_lock')
+}
 
 window.addEventListener('resize', function () {
    if (window.matchMedia('(max-width: 1024px)').matches) {
       burgerLine.classList.remove('active')
       burgerMenu.classList.remove('active')
+      burgerBlock.classList.remove('active')
       document.body.classList.remove('_lock')
    }
 })
