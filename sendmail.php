@@ -3,33 +3,32 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->isHTML(true);
 
-// От кого письмо
-$mail->setFrom('');
+
 // Кому отправить
-$mail->addAddress('');
+$mail->addAddress('Info@Detox-24.ru');
 // Тема письма
-$mail->Subject = '';
+$mail->Subject = 'Заявка';
 
 // Тело письма
 $body = '<h1></h1>';
 
 if (trim(!empty($_POST['name']))) {
-	$body .= '<><strong>Имя</strong> ' . $_POST['name'] . '</p>';
+	$body .= '<p><strong>Имя:</strong> ' . $_POST['name'] . '</p>';
 }
-if (trim(!empty($_POST['tel']))) {
-	$body .= '<><strong>tel:</strong> ' . $_POST['tel'] . '</p>';
+if (trim(!empty($_POST['telephone']))) {
+	$body .= '<p><strong>Телефон:</strong> ' . $_POST['tel'] . '</p>';
 }
 if (trim(!empty($_POST['message']))) {
-	$body .= '<><strong>Возраст</strong> ' . $_POST['age'] . '</p>';
+	$body .= '<p><strong>Сообщение:</strong> ' . $_POST['age'] . '</p>';
 }
 
 $mail->Body = $body;
