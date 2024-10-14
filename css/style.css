@@ -3697,7 +3697,7 @@ summary:focus {
 }
 
 .review-content-popup {
-  height: 871px;
+  height: 850px;
 }
 
 .simple-rating {
@@ -3810,6 +3810,64 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.input-file {
+  position: relative;
+  display: inline-block;
+}
+
+.input-file-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  vertical-align: middle;
+  color: var(--bg-white-color);
+  text-align: center;
+  border-radius: 4px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNSAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjQxODggMTEuMzg4OEw1Ljk3ODggMS45NjY0OUM1LjIyNzY5IDAuNjY1NTM2IDMuNTg0ODUgMC4yMDc4NTYgMi4zMDk0IDAuOTQ0MjM2QzEuMDMzOTUgMS42ODA2MiAwLjYwODg5MyAzLjMzMjIgMS4zNiA0LjYzMzE2TDYuOCAxNC4wNTU1TTQuMDA5NCAzLjg4ODcyTDkuNDQ5NCAxMy4zMTExQzEwLjIwMDUgMTQuNjEyIDExLjg0MzQgMTUuMDY5NyAxMy4xMTg4IDE0LjMzMzNDMTQuMzk0MiAxMy41OTcgMTQuODE5MyAxMS45NDU0IDE0LjA2ODIgMTAuNjQ0NEw4LjYyODIgMS4yMjIwNiIgc3Ryb2tlPSIjMUQ2OUQ4Ii8+Cjwvc3ZnPgo=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  opacity: 0.4;
+  line-height: 22px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  transition: background-color 0.2s;
+}
+
+.input-file-text {
+  line-height: 40px;
+  display: inline-block;
+  font-family: Inter;
+  color: var(--blue-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.input-file input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.input-file input[type=file]:focus + .input-file-btn {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-file input[type=file]:disabled + .input-file-btn {
+  background-color: #eee;
+}
+
 @media (max-width: 642.98px) {
   .popup__content {
     padding: 20px;
@@ -3847,6 +3905,32 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     line-height: 100%;
     line-height: 120%;
+    margin-bottom: 20px;
+  }
+  .review-content-popup {
+    height: 590px;
+  }
+  .popup__form-review h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .popup__form-review p {
+    font-size: 15px;
+  }
+  .simple-rating {
+    font-size: 44px;
+  }
+  .textarea-review {
+    height: 75px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .popup__form-review {
+    border-radius: 20px;
+    padding: 10px;
+    height: 420px;
+  }
+  .file__add-review {
     margin-bottom: 20px;
   }
   .popup__form-block {

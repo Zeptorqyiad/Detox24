@@ -9,6 +9,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:regular,500,600,700,800" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700,800" rel="stylesheet" />
 	<link rel="icon" href="./assets/icon/Detox.ico" type="image/x-icon">
@@ -1019,11 +1020,15 @@
 							</div>
 							<textarea placeholder="Ваш комментарий" name="message" class="form__textarea textarea-review"
 								style="resize: none;"></textarea>
-							<input type="file" class="file__add-review">
+							<label class="file__add-review input-file">
+								<input type="file" name="file">
+								<span class="input-file-btn"></span>
+								<span class="input-file-text">Прикрепите фото</span>
+							</label>
 							<button type="submit" class="header__btn popup__btn form__button">Отправить</button>
 						</form>
 					</div>
-					<span class="popup-politic politic-review ">
+					<span class="popup-politic politic-review">
 						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="#popup-politic" class="popup-link">политикой
 							конфиденциальности</a>
 					</span>
@@ -1033,6 +1038,7 @@
 	</div>
 	<!-- Подключаем файл JS скриптов -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script src="js/script.js"></script>
 	<script defer src="./js/swiper.js"></script>
 	<script defer src="./js/mailSender.js"></script>

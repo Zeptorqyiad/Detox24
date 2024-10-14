@@ -256,3 +256,10 @@ politicTextEl.textContent = `
 12.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.
 12.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https://detox-24.ru/privacy.
 `
+
+// Popup 
+
+$('.input-file input[type=file]').on('change', function () {
+   let file = this.files[0]
+   $(this).closest('.input-file').find('.input-file-text').html(file.name)
+})
