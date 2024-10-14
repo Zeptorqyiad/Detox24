@@ -108,18 +108,6 @@
 		}
 	}
 }
-.popup-form::after {
-	content: "";
-	position: absolute;
-	top: -100px;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: url("../../assets/icon/sending.gif") center / 50px no-repeat;
-	z-index: 9999;
-	opacity: 0;
-	visibility: hidden;
-}
 .popup-form._sending::after {
 	opacity: 1;
 	visibility: visible;
@@ -176,20 +164,36 @@
 //=========================Review Popup==================================
 
 .popup__form-review {
+	background-color: var(--bg-white-color);
+	border-radius: 30px;
+	padding: 20px;
+	height: 600px;
+	h4 {
+		@include textDefault($ff2, var(--dark-color), 25px, 600, 25px);
+		line-height: calc(30 / 25 * 100%);
+		max-width: 346px;
+		margin-bottom: 40px;
+	}
+	p {
+		@include textDefault($ff1, var(--dark-color), 18px, 400, 18px);
+		line-height: 25.74px;
+		text-align: left;
+		margin-bottom: 10px;
+	}
 }
-.form__review-items {
-}
-.form__review-item {
+.review-content-popup {
+	height: 871px;
 }
 .simple-rating {
 	position: relative;
-	font-size: 45px;
+	font-size: 52px;
 	display: inline-block;
 	&::before {
 		content: "★★★★★";
 		color: #1d68d845;
 		display: block;
 	}
+	margin-bottom: 20px;
 }
 .simple-rating__items {
 	position: absolute;
@@ -254,6 +258,26 @@
 	line-height: 1;
 	letter-spacing: 1;
 }
+.double__input-review {
+	@include flexbox;
+	gap: 40px;
+}
+.textarea-review {
+	width: 100%;
+	height: 124px;
+	background-color: var(--dark-white-color);
+	border-radius: 15px;
+	opacity: 0.5;
+	padding: 10px;
+	@include textDefault($ff1, var(--dark-color), 18px, 400, 18px);
+	line-height: 25.74px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.file__add-review {
+	margin-bottom: 40px;
+}
+
 //=======================================================================
 
 input::-webkit-outer-spin-button,

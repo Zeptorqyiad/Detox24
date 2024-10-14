@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    flex: 1 1 auto;
+    height: 90vw;
   }
   .menu__icon-bottom p {
     color: var(--dark-color);
@@ -3597,19 +3597,6 @@ summary:focus {
   text-align: left;
 }
 
-.popup-form::after {
-  content: "";
-  position: absolute;
-  top: -100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../../assets/icon/sending.gif") center/50px no-repeat;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-}
-
 .popup-form._sending::after {
   opacity: 1;
   visibility: visible;
@@ -3682,10 +3669,42 @@ summary:focus {
   border-bottom: 1px solid red;
 }
 
+.popup__form-review {
+  background-color: var(--bg-white-color);
+  border-radius: 30px;
+  padding: 20px;
+  height: 600px;
+}
+.popup__form-review h4 {
+  font-family: Raleway;
+  color: var(--dark-color);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 100%;
+  line-height: 120%;
+  max-width: 346px;
+  margin-bottom: 40px;
+}
+.popup__form-review p {
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  line-height: 25.74px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.review-content-popup {
+  height: 871px;
+}
+
 .simple-rating {
   position: relative;
-  font-size: 45px;
+  font-size: 52px;
   display: inline-block;
+  margin-bottom: 20px;
 }
 .simple-rating::before {
   content: "★★★★★";
@@ -3757,6 +3776,32 @@ summary:focus {
   color: rgba(0, 0, 0, 0.544);
   line-height: 1;
   letter-spacing: 1;
+}
+
+.double__input-review {
+  display: flex;
+  gap: 40px;
+}
+
+.textarea-review {
+  width: 100%;
+  height: 124px;
+  background-color: var(--dark-white-color);
+  border-radius: 15px;
+  opacity: 0.5;
+  padding: 10px;
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  line-height: 25.74px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.file__add-review {
+  margin-bottom: 40px;
 }
 
 input::-webkit-outer-spin-button,

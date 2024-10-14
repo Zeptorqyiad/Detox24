@@ -966,17 +966,24 @@
 				</div>
 			</div>
 		</div>
+		<div id="popup-politic" class="popup">
+			<div class="popup__body">
+				<div class="popup__content popup__content-politic">
+					<a href="#" class="popup__close close-popup"></a>
+					<h3 class="politic-text-popup">Политика конфиденциальности</h3>
+					<div class="politic-text-content"></div>
+				</div>
+			</div>
+		</div>
 		<div id="popup-review" class="popup">
 			<div class="popup__body">
-				<div class="popup__content">
+				<div class="popup__content review-content-popup">
 					<a href="#" class="popup__close close-popup"></a>
 					<h3>Оставить отзыв</h3>
 					<div class="popup__form-review">
+						<h4>Укажите свои контакты и мы сразу свяжемся с Вами.</h4>
+						<p>Оцените качество услуг</p>
 						<form action="#" method="post" id="form" class="form__review-items">
-							<h4>Укажите свои контакты и мы сразу свяжемся с Вами.</h4>
-							<div class="form__review-item">
-								<p>Оцените качество услуг</p>
-							</div>
 							<div class="simple-rating">
 								<div class="simple-rating__items">
 									<!-- 5 -->
@@ -1001,17 +1008,25 @@
 									<label for="simple-rating__1" class="simple-rating__label"></label>
 								</div>
 							</div>
+							<div class="popup-form_item double__input-review">
+								<input id="nameInp" type="text" name="name" class="form__input" placeholder="Ваше имя">
+								<input id="ageInp" type="number" name="age" class="form__input" placeholder="Ваш возраст">
+							</div>
+							<div class="popup-form_item">
+								<label for="telInp"></label>
+								<input id="telInp" type="number" class="form__input _req" name="telephone"
+									placeholder="+7 (999) 999-99-99*">
+							</div>
+							<textarea placeholder="Ваш комментарий" name="message" class="form__textarea textarea-review"
+								style="resize: none;"></textarea>
+							<input type="file" class="file__add-review">
+							<button type="submit" class="header__btn popup__btn form__button">Отправить</button>
 						</form>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div id="popup-politic" class="popup">
-			<div class="popup__body">
-				<div class="popup__content popup__content-politic">
-					<a href="#" class="popup__close close-popup"></a>
-					<h3 class="politic-text-popup">Политика конфиденциальности</h3>
-					<div class="politic-text-content"></div>
+					<span class="popup-politic politic-review ">
+						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="#popup-politic" class="popup-link">политикой
+							конфиденциальности</a>
+					</span>
 				</div>
 			</div>
 		</div>
