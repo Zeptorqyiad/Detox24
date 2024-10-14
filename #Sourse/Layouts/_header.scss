@@ -226,6 +226,7 @@
 		position: absolute;
 		width: 50vw;
 		height: 100vh;
+		overflow: scroll;
 		top: 0px;
 		left: 0px;
 		padding: 25px;
@@ -269,8 +270,7 @@
 	.menu__icon-bottom {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
-		height: 90vw;
+		margin-top: 40%;
 		p {
 			color: var(--dark-color);
 			font-family: $ff2;
