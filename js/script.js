@@ -257,9 +257,52 @@ politicTextEl.textContent = `
 12.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https://detox-24.ru/privacy.
 `
 
-// Popup 
+// Popup
 
 $('.input-file input[type=file]').on('change', function () {
    let file = this.files[0]
    $(this).closest('.input-file').find('.input-file-text').html(file.name)
+})
+
+// Popup success form
+
+$(document).ready(function () {
+   $('.popup-form').on('submit', function (e) {
+      e.preventDefault() // Останавливаем стандартное поведение формы
+
+      $.ajax({
+         type: 'POST',
+         url: 'sendmail.php',
+         data: $(this).serialize(), // Собираем данные формы
+         success: function (response) {
+            console.log(response) // Выводим ответ от сервера в консоль для отладки
+
+            if (response.trim() === 'success') {
+               // Проверяем ответ от сервера
+               alert('Ваш запрос успешно отправлен!')
+               $('#popup').fadeOut() // Закрыть первый поп-ап
+               $('#successPopup').fadeIn() // Открыть поп-ап об успешной отправке
+            } else {
+               alert('Произошла ошибка при отправке. Попробуйте снова.')
+            }
+         },
+         error: function () {
+            alert('Произошла ошибка при отправке. Попробуйте снова.')
+         },
+      })
+   })
+})
+
+//
+
+$(document).ready(function () {
+   var url = window.location.href
+   var hash = window.location.hash
+
+   url = 'http://127.0.0.1:5500/index.html'
+   hash = '#successPopup'
+
+   if (hash == '#modal') {
+      $('.modal').show('slow')
+   }
 })

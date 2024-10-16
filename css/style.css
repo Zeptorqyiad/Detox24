@@ -85,8 +85,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  padding-top: 30px;
-  background-color: var(--dark-white-color);
+  background-color: var(--bg-white-color);
+  position: relative;
+  z-index: 9999;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .header__content {
@@ -374,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
   .menu__icon-bottom {
     display: flex;
     flex-direction: column;
-    margin-top: 5vw;
+    margin-top: 10vw;
   }
   .menu__icon-bottom p {
     color: var(--dark-color);
@@ -809,6 +815,7 @@ body {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
+  padding-top: 100px;
 }
 
 html,

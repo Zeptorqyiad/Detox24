@@ -3,8 +3,14 @@
 
 //=======================================================================
 .header {
-	padding-top: 30px;
-	background-color: var(--dark-white-color);
+	background-color: var(--bg-white-color);
+	position: relative;
+	z-index: 9999;
+	padding: 20px 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 .header__content {
 	@include flexbox();
@@ -270,7 +276,7 @@
 	.menu__icon-bottom {
 		display: flex;
 		flex-direction: column;
-		margin-top: 5vw;
+		margin-top: 10vw;
 		p {
 			color: var(--dark-color);
 			font-family: $ff2;

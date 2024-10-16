@@ -1,46 +1,26 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Получаем данные из формы
+	$name = $_POST['name'];
+	$telephone = $_POST['telephone'];
+	$message = $_POST['message'];
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+	// Настраиваем получателя письма
+	$to = "Zeptorqyiad99@gmail.com";  // Укажите ваш реальный email
+	$subject = "Запрос с формы на сайте";
+	$body = "Имя: $name\nТелефон: $telephone\nСообщение: $message";
 
-$mail = new PHPMailer(true);
-$mail->CharSet = 'UTF-8';
-$mail->setLanguage('ru', 'phpmailer/language/');
-$mail->isHTML(true);
+	// Указываем заголовки письма
+	$headers = "From: info@detox-24.ru\r\n";
+	$headers .= "Content-type: text/plain; charset=UTF-8\r\n";
 
-
-// Кому отправить
-$mail->addAddress('Info@Detox-24.ru');
-// Тема письма
-$mail->Subject = 'Заявка';
-
-// Тело письма
-$body = '<h1></h1>';
-
-if (trim(!empty($_POST['name']))) {
-	$body .= '<p><strong>Имя:</strong> ' . $_POST['name'] . '</p>';
+	// Отправляем письмо
+	if (mail($to, $subject, $body, $headers)) {
+		echo "success";  // Возвращаем 'success' в случае успешной отправки
+	} else {
+		echo "error";  // Возвращаем 'error' в случае ошибки
+	}
 }
-if (trim(!empty($_POST['telephone']))) {
-	$body .= '<p><strong>Телефон:</strong> ' . $_POST['tel'] . '</p>';
-}
-if (trim(!empty($_POST['message']))) {
-	$body .= '<p><strong>Сообщение:</strong> ' . $_POST['age'] . '</p>';
-}
-
-$mail->Body = $body;
-
-// Отправка
-if (!$mail->send()) {
-	$message = 'Ошибка';
-} else {
-	$message = 'Данные отправлены!';
-}
-
-$response = ['message' => $message];
-
-header('Content-type: application/json');
-echo json_encode($response);

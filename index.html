@@ -9,6 +9,8 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="https://unpkg.com/inputmask@5.0.9-beta.25/dist/inputmask.js"></script>
+	<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:regular,500,600,700,800" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=Inter:regular,500,600,700,800" rel="stylesheet" />
@@ -16,7 +18,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="fullpage">
 		<header class="header">
 			<div class="header__container">
 				<div class="header__content">
@@ -921,20 +923,34 @@
 						<p>
 							Укажите свои контакты и мы сразу свяжемся с Вами.
 						</p>
-						<form action="#" id="form" method="post" class="popup-form">
+						<form action="#successPopup" method="POST" class="popup-form">
 							<div class="popup-form_item">
-								<label for="nameInp"></label>
-								<input id="nameInp" type="text" name="name" class="form__input _req" placeholder="Ваше имя*">
+								<input id="nameInp" type="text" name="name" class="form__input _req" placeholder="Ваше имя*"
+									required>
 							</div>
 							<div class="popup-form_item">
-								<label for="telInp"></label>
-								<input id="telInp" type="number" class="form__input _req" name="telephone"
-									placeholder="+7 (999) 999-99-99*">
+								<input id="telInp" type="text" name="telephone" class="form__input _req"
+									placeholder="+7 (999) 999-99-99*" required>
 							</div>
 							<textarea placeholder="Комментарий" name="message" class="form__textarea"
 								style="resize: none;"></textarea>
-							<button type="submit" class="header__btn popup__btn form__button">Вызвать врача</button>
+							<a href="#successPopup">
+								<button type="submit" onclick="location.href = '#successPopup'; return true;"
+									class="header__btn popup__btn form__button popup-link">Вызвать врача</button>
+							</a>
 						</form>
+					</div>
+					<div id="successPopup" class="popup">
+						<div class="popup__body">
+							<div class="popup__content">
+								<a href="#" class="popup__close close-popup"></a>
+								<h3>Вызвать врача</h3>
+								<p>Ваша заявка успешно отправлена.</p>
+								<p>Наши врачи в ближайшее время свяжутся с вами.</p>
+								<button type="button" class="header__btn popup__btn" onclick="closePopup()">Вызвать
+									врача</button>
+							</div>
+						</div>
 					</div>
 					<span class="popup-politic">
 						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="#popup-politic" class="popup-link">политикой
@@ -984,26 +1000,21 @@
 					<div class="popup__form-review">
 						<h4>Укажите свои контакты и мы сразу свяжемся с Вами.</h4>
 						<p>Оцените качество услуг</p>
-						<form action="#" method="post" id="form" class="form__review-items">
+						<!-- <form action="#" method="post" id="form" class="form__review-items">
 							<div class="simple-rating">
 								<div class="simple-rating__items">
-									<!-- 5 -->
 									<input id="simple-rating__5" type="radio" class="simple-rating__item" name="simple-rating"
 										value="5">
 									<label for="simple-rating__5" class="simple-rating__label"></label>
-									<!-- 4 -->
 									<input id="simple-rating__4" type="radio" class="simple-rating__item" name="simple-rating"
 										value="4">
 									<label for="simple-rating__4" class="simple-rating__label"></label>
-									<!-- 3 -->
 									<input id="simple-rating__3" type="radio" class="simple-rating__item" name="simple-rating"
 										value="3">
 									<label for="simple-rating__3" class="simple-rating__label"></label>
-									<!-- 2 -->
 									<input id="simple-rating__2" type="radio" class="simple-rating__item" name="simple-rating"
 										value="2">
 									<label for="simple-rating__2" class="simple-rating__label"></label>
-									<!-- 1 -->
 									<input id="simple-rating__1" type="radio" class="simple-rating__item" name="simple-rating"
 										value="1">
 									<label for="simple-rating__1" class="simple-rating__label"></label>
@@ -1026,7 +1037,7 @@
 								<span class="input-file-text">Прикрепите фото</span>
 							</label>
 							<button type="submit" class="header__btn popup__btn form__button">Отправить</button>
-						</form>
+						</form> -->
 					</div>
 					<span class="popup-politic politic-review">
 						Нажимая кнопку «Отправить» Вы соглашаетесь с <a href="#popup-politic" class="popup-link">политикой
@@ -1035,6 +1046,21 @@
 				</div>
 			</div>
 		</div>
+		<!-- Новый поп-ап для успешной отправки -->
+		<div id="successPopup" class="popup">
+			<div class="popup__body">
+				<div class="popup__content">
+					<a href="#" class="popup__close close-popup"></a>
+					<h3>Спасибо!</h3>
+					<p>Ваш запрос успешно отправлен. Мы скоро свяжемся с вами!</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			function closePopup() {
+				document.getElementById('successPopup').classList.remove('active');
+			}
+		</script>
 	</div>
 	<!-- Подключаем файл JS скриптов -->
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
