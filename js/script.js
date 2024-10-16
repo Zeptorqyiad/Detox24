@@ -41,6 +41,18 @@ window.addEventListener('resize', function () {
    }
 })
 
+// Header scroll
+
+let header = document.querySelector('.header')
+window.onscroll = function () {
+   if (window.scrollY > 50) {
+      header.style.background = '#ffffff'
+      header.style.transition = 'background 0.2s'
+   } else {
+      header.style.background = 'rgba(0, 0, 0, 0)'
+   }
+}
+
 // Popup
 
 const popupLinks = document.querySelectorAll('.popup-link')

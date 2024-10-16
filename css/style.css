@@ -85,7 +85,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  background-color: var(--bg-white-color);
   position: relative;
   z-index: 9999;
   padding: 20px 0;
@@ -93,6 +92,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   top: 0;
   left: 0;
+  background: transparent;
+}
+
+.header.scroll + .header {
+  background: var(--bg-white-color);
 }
 
 .header__content {
@@ -815,7 +819,8 @@ body {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
-  padding-top: 100px;
+  padding-top: 90px;
+  background-color: var(--dark-white-color);
 }
 
 html,
@@ -2545,7 +2550,7 @@ body._lock {
 }
 
 .hospital__image-1 {
-  background-image: url("../../assets/images/main/hospital1.png");
+  background-image: url("../../assets/images/main/hospital1.jpeg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
