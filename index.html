@@ -925,17 +925,14 @@
 						</p>
 						<form action="#successPopup" method="POST" class="popup-form">
 							<div class="popup-form_item">
-								<input id="nameInp" type="text" name="name" class="form__input _req" placeholder="Ваше имя*"
-									required>
+								<input id="nameInp" type="text" name="name" class="form__input _req" placeholder="Ваше имя*">
 							</div>
 							<div class="popup-form_item">
-								<input id="telInp" type="text" name="telephone" class="form__input _req"
-									placeholder="+7 (999) 999-99-99*" required>
+								<input id="telInp" type="number" data-validate-field="tel" name="tel" class="form__input _req">
 							</div>
 							<textarea placeholder="Комментарий" name="message" class="form__textarea"
 								style="resize: none;"></textarea>
-							<button type="submit" class="header__btn popup__btn form__button">Вызвать
-								врача</button>
+							<button type="submit" class="header__btn popup__btn form__button">Вызвать врача</button>
 						</form>
 					</div>
 					<div id="successPopup" class="popup">
@@ -1064,6 +1061,9 @@
 	<script src="js/script.js"></script>
 	<script defer src="./js/swiper.js"></script>
 	<script defer src="./js/mailSender.js"></script>
+	<script src="./js/inputValidate.js"></script>
+	<script src="./js/just-validate.min.js"></script>
+	<script src="./js/inputmask.min.js"></script>
 </body>
 
 </html>
