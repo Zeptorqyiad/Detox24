@@ -278,6 +278,8 @@ $('.input-file input[type=file]').on('change', function () {
 
 // Popup success form
 
+let successPopup = document.getElementById('successPopup')
+
 $(document).ready(function () {
    $('.popup-form').on('submit', function (e) {
       e.preventDefault() // Останавливаем стандартное поведение формы
@@ -288,14 +290,21 @@ $(document).ready(function () {
          data: $(this).serialize(), // Собираем данные формы
          success: function (response) {
             console.log(response) // Выводим ответ от сервера в консоль для отладки
+				
+				document.getElementById('loading').style.display = 'block' // Показать GIF загрузки
+            setTimeout(function () {
+					// Код для отправки данных с помощью AJAX
+               // После успешной отправки данных показать попап с сообщением
+               document.getElementById('loading').style.display = 'none' // Скрыть GIF загрузки
+               showPopup('Сообщение отправлено успешно!')
+            }, 2000) // Задержка в миллисекундах (например, 2000 мс = 2 секунды)
 
             if (response.trim() === 'success') {
-               // Проверяем ответ от сервера
+					// Проверяем ответ от сервера
                alert('Ваш запрос успешно отправлен!')
-               $('#popup').fadeOut() // Закрыть первый поп-ап
-               $('#successPopup').fadeIn() // Открыть поп-ап об успешной отправке
+               successPopup.classList.add('open')
             } else {
-               alert('Произошла ошибка при отправке. Попробуйте снова.')
+					alert('Произошла ошибка при отправке. Попробуйте снова.')
             }
          },
          error: function () {
@@ -305,16 +314,6 @@ $(document).ready(function () {
    })
 })
 
-//
-
-$(document).ready(function () {
-   var url = window.location.href
-   var hash = window.location.hash
-
-   url = 'http://127.0.0.1:5500/index.html'
-   hash = '#successPopup'
-
-   if (hash == '#modal') {
-      $('.modal').show('slow')
-   }
-})
+function closePopup() {
+   document.getElementById('successPopup').classList.remove('active')
+}

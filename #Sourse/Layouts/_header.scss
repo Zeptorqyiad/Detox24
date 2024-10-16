@@ -12,9 +12,6 @@
 	left: 0;
 	background: transparent;
 }
-.header.scroll + .header{
-	background: var(--bg-white-color);
-}
 .header__content {
 	@include flexbox();
 	align-items: center;

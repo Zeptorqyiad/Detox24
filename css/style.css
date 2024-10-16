@@ -95,10 +95,6 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 
-.header.scroll + .header {
-  background: var(--bg-white-color);
-}
-
 .header__content {
   display: flex;
   align-items: center;
@@ -808,6 +804,7 @@ address {
 }
 
 .wrapper {
+  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -4011,6 +4008,43 @@ input::-webkit-inner-spin-button {
     margin-top: 50px;
   }
 }
+#loading {
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 9999;
+}
+
+.popup__content-success {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: var(--dark-white-color);
+  color: #000;
+  width: 580px;
+  height: 300px;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: scale(0);
+}
+.popup__content-success h3 {
+  margin-bottom: 0;
+}
+.popup__content-success p {
+  font-family: Inter;
+  color: var(--dark-color);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 105.8823529412%;
+  line-height: 140%;
+}
+
+.popup.open .popup__content-success {
+  transform: scale(1);
+  opacity: 1;
+}
+
 :root {
   --bg-white-color: #ffffff;
   --dark-white-color: #f3f3f3;

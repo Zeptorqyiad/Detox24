@@ -934,10 +934,8 @@
 							</div>
 							<textarea placeholder="Комментарий" name="message" class="form__textarea"
 								style="resize: none;"></textarea>
-							<a href="#successPopup">
-								<button type="submit" onclick="location.href = '#successPopup'; return true;"
-									class="header__btn popup__btn form__button popup-link">Вызвать врача</button>
-							</a>
+							<button type="submit" class="header__btn popup__btn form__button">Вызвать
+								врача</button>
 						</form>
 					</div>
 					<div id="successPopup" class="popup">
@@ -1048,12 +1046,16 @@
 		</div>
 		<div id="successPopup" class="popup">
 			<div class="popup__body">
-				<div class="popup__content">
+				<div class="popup__content popup__content-success">
 					<a href="#" class="popup__close close-popup"></a>
 					<h3>Спасибо!</h3>
 					<p>Ваш запрос успешно отправлен. Мы скоро свяжемся с вами!</p>
+					<a href="/index.html" class="main-btn about-btn">На главный экран</a>
 				</div>
 			</div>
+		</div>
+		<div id="loading" style="display: none;">
+			<img src="./assets/icon/loading.gif" alt="Loading...">
 		</div>
 	</div>
 	<!-- Подключаем файл JS скриптов -->
