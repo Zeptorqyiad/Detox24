@@ -290,21 +290,21 @@ $(document).ready(function () {
          data: $(this).serialize(), // Собираем данные формы
          success: function (response) {
             console.log(response) // Выводим ответ от сервера в консоль для отладки
-				
-				document.getElementById('loading').style.display = 'block' // Показать GIF загрузки
+
+            document.getElementById('loading').style.display = 'block' // Показать GIF загрузки
             setTimeout(function () {
-					// Код для отправки данных с помощью AJAX
+               // Код для отправки данных с помощью AJAX
                // После успешной отправки данных показать попап с сообщением
                document.getElementById('loading').style.display = 'none' // Скрыть GIF загрузки
                showPopup('Сообщение отправлено успешно!')
             }, 2000) // Задержка в миллисекундах (например, 2000 мс = 2 секунды)
 
             if (response.trim() === 'success') {
-					// Проверяем ответ от сервера
+               // Проверяем ответ от сервера
                alert('Ваш запрос успешно отправлен!')
                successPopup.classList.add('open')
             } else {
-					alert('Произошла ошибка при отправке. Попробуйте снова.')
+               alert('Произошла ошибка при отправке. Попробуйте снова.')
             }
          },
          error: function () {

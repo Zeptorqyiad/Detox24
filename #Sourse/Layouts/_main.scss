@@ -20,7 +20,7 @@
 	flex: 0 1 1160px;
 }
 .banner__title {
-	@include textDefault($ff2, var(--dark-color), 90px, 500, 90px);
+	@include textDefault($ff2, var(--dark-color), 76px, 500, 76px);
 	line-height: 110%;
 	text-align: left;
 	p {
@@ -42,6 +42,10 @@
 		color: var(--blue-color);
 	}
 	margin-bottom: 30px;
+}
+.circle-min-2 img {
+	max-width: 300px;
+	max-height: 300px;
 }
 .banner__subtitle {
 	display: flex;
@@ -185,7 +189,7 @@
 		gap: 86px;
 	}
 	.banner__title {
-		@include textDefault($ff2, var(--dark-color), 81px, 500, 81px);
+		@include textDefault($ff2, var(--dark-color), 66px, 500, 66px);
 		line-height: 110%;
 		margin-bottom: 27px;
 	}
@@ -235,6 +239,11 @@
 	}
 }
 @media (max-width: $md2) {
+	.banner__title {
+		@include textDefault($ff2, var(--dark-color), 58px, 500, 58px);
+		line-height: 110%;
+		margin-bottom: 27px;
+	}
 	.banner__content-bottom {
 		gap: 25px;
 		height: 282px;
@@ -290,11 +299,6 @@
 @media (max-width: 1408px) {
 	.banner__content {
 		gap: 71px;
-	}
-	.banner__title {
-		@include textDefault($ff2, var(--dark-color), 69px, 500, 69px);
-		line-height: 110%;
-		margin-bottom: 27px;
 	}
 	.circle_1 {
 		width: 272px;
@@ -397,6 +401,11 @@
 	}
 	.header__btn {
 		text-align: center;
+	}
+}
+@media (max-width: 1131.98px) {
+	.banner__title {
+		font-size: 54px;
 	}
 }
 @media (max-width: 1007.98px) {

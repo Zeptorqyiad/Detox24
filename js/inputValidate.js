@@ -1,18 +1,5 @@
-let inputs = document.querySelector('input[type="tel"]')
-let im = new Inputmask('+7 (999) 999-99-99')
-im.mask(inputs)
-
-// validate
-
-function validateForms(selector, rules) {
-   new window.JustValidate(selector, {
-      rules: rules,
-      submitHandler: function (form, values, ajax) {
-         console.log(form)
-      },
-   })
+const element = document.getElementById('phone')
+const maskOptions = {
+   mask: '+{7}(000)000-00-00',
 }
-
-validateForms('.popup-form', {
-   fio: { required: true },
-})
+const mask = IMask(element, maskOptions)
