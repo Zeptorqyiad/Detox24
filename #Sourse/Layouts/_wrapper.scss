@@ -21,6 +21,12 @@ body {
 	background-color: var(--dark-white-color);
 }
 
+@media (max-width: 375.98px) {
+	body {
+		padding-top: 40px;
+	}
+}
+
 html,
 body {
 	scroll-behavior: smooth;

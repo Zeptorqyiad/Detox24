@@ -404,8 +404,13 @@
 	}
 }
 @media (max-width: 1131.98px) {
+	.banner__content-top-ls {
+	}
+	.banner__content-top-rs {
+	}
 	.banner__title {
 		font-size: 54px;
+		min-width: 100%;
 	}
 }
 @media (max-width: 1007.98px) {
@@ -454,7 +459,7 @@
 		max-width: 238px;
 	}
 	.banner__title {
-		@include textDefault($ff2, var(--dark-color), 8vw, 500, 8vw);
+		@include textDefault($ff2, var(--dark-color), 9vw, 500, 9vw);
 		line-height: 110%;
 		> span:nth-child(2) {
 			display: block;

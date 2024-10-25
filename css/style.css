@@ -644,6 +644,21 @@ address {
       height: 360px;
    }
 }
+.footer__bottom-text {
+   display: block;
+   justify-content: center;
+   text-align: center;
+   margin-bottom: 20px;
+}
+.footer__bottom-text span {
+   font-family: Inter;
+   color: var(--dark-color);
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 100%;
+   white-space: wrap;
+}
+
 @media (min-width: 1441px) {
    .license__block a img {
       width: 100%;
@@ -798,6 +813,18 @@ address {
       height: 360px;
    }
 }
+@media (max-width: 425.98px) {
+   .footer__content {
+      margin-bottom: 20px;
+   }
+   .footer__bottom-text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: left;
+      margin-bottom: 20px;
+   }
+}
 @media (max-width: 375px) {
    .footer__block-map img {
       height: 294px;
@@ -836,6 +863,11 @@ body {
    background-color: var(--dark-white-color);
 }
 
+@media (max-width: 375.98px) {
+   body {
+      padding-top: 40px;
+   }
+}
 html,
 body {
    scroll-behavior: smooth;
@@ -1343,6 +1375,7 @@ body._lock {
 @media (max-width: 1131.98px) {
    .banner__title {
       font-size: 54px;
+      min-width: 100%;
    }
 }
 @media (max-width: 1007.98px) {
@@ -1391,7 +1424,7 @@ body._lock {
    .banner__title {
       font-family: Raleway;
       color: var(--dark-color);
-      font-size: 8vw;
+      font-size: 9vw;
       font-weight: 500;
       line-height: 100%;
       line-height: 110%;
